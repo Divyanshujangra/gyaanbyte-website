@@ -6,10 +6,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="xl:col-span-1">
-            <div className="text-2xl font-bold text-gb-blue mb-4">
-              GyaanByte
-              <span className="text-gb-orange text-sm ml-1">Labs</span>
-            </div>
+            <img
+              src="/logos/gyaanbyte-logo.svg"
+              alt="GyaanByte Labs"
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-gray-500 text-base max-w-md">
               Financial Data Engineering Excellence. Bridging US accounting standards with Indian engineering talent.
             </p>
@@ -115,10 +116,14 @@ const Footer = () => {
                     Rohtak, Haryana, India
                   </p>
                   <p className="text-base text-gray-500">
-                    divya@gyaanbyte.com
+                    <a href="mailto:divya@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors">
+                      divya@gyaanbytelabs.com
+                    </a>
                   </p>
                   <p className="text-base text-gray-500">
-                    www.gyaanbyte.com
+                    <a href="https://www.gyaanbytelabs.com" className="hover:text-gb-blue transition-colors">
+                      www.gyaanbytelabs.com
+                    </a>
                   </p>
                 </div>
               </div>

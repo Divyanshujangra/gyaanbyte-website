@@ -10,10 +10,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-gb-blue">
-                GyaanByte
-                <span className="text-gb-orange text-sm ml-1">Labs</span>
-              </div>
+              <img
+                src="/logos/gyaanbyte-logo.svg"
+                alt="GyaanByte Labs"
+                className="h-10 w-auto"
+              />
             </a>
           </div>
 
@@ -68,10 +69,11 @@ const Header = () => {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold text-gb-blue">
-                  GyaanByte
-                  <span className="text-gb-orange text-sm ml-1">Labs</span>
-                </div>
+                <img
+                  src="/logos/gyaanbyte-logo.svg"
+                  alt="GyaanByte Labs"
+                  className="h-8 w-auto"
+                />
                 <div className="-mr-2">
                   <button
                     type="button"
