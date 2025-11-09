@@ -81,11 +81,19 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-4">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Skill India Certified Training Partner
+              <div className="flex gap-2 mb-4 flex-wrap">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Startup India Recognized
+                </div>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  Skill India Partner
+                </div>
               </div>
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 GyaanByte Academy
@@ -178,6 +186,164 @@ const Home = () => {
                     <div className="text-sm opacity-90">Apply now to secure your spot</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Government Certifications Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              Government Recognized & Certified
+            </h2>
+            <p className="mt-4 text-lg text-gray-500">
+              Validated by the Government of India for innovation and quality training
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            {/* Startup India Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="flex items-center justify-between mb-6">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-bold">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  CERTIFIED
+                </div>
+                <div className="text-gb-blue">
+                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Startup India Recognition
+              </h3>
+
+              <div className="mb-4">
+                <p className="text-sm text-gray-500">Certificate No.</p>
+                <p className="text-lg font-semibold text-gray-900">DIPP228466</p>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-sm text-gray-500">Issued By</p>
+                <p className="text-base font-medium text-gray-900">
+                  Department for Promotion of Industry and Internal Trade (DPIIT)
+                </p>
+                <p className="text-sm text-gray-500">Ministry of Commerce & Industry, Govt. of India</p>
+              </div>
+
+              <div className="mb-6">
+                <p className="text-sm text-gray-500">Industry & Sector</p>
+                <p className="text-base font-medium text-gray-900">Analytics | Big Data</p>
+              </div>
+
+              <div className="border-t pt-4">
+                <p className="text-sm text-gray-600 mb-3">This certification recognizes GyaanByte Labs as an innovative startup in the Analytics and Big Data sector, validated for quality and innovation.</p>
+                <div className="flex items-center text-sm text-blue-600">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Valid until August 17, 2035</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Skill India Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="flex items-center justify-between mb-6">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-bold">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  CERTIFIED
+                </div>
+                <div className="text-green-600">
+                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                  </svg>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Skill India Training Partner
+              </h3>
+
+              <div className="mb-4">
+                <p className="text-sm text-gray-500">Partnership Status</p>
+                <p className="text-lg font-semibold text-gray-900">Certified Training Provider</p>
+              </div>
+
+              <div className="mb-4">
+                <p className="text-sm text-gray-500">Issued By</p>
+                <p className="text-base font-medium text-gray-900">
+                  Ministry of Skill Development & Entrepreneurship
+                </p>
+                <p className="text-sm text-gray-500">Government of India</p>
+              </div>
+
+              <div className="mb-6">
+                <p className="text-sm text-gray-500">Training Focus</p>
+                <p className="text-base font-medium text-gray-900">Financial Data Engineering</p>
+              </div>
+
+              <div className="border-t pt-4">
+                <p className="text-sm text-gray-600 mb-3">Authorized to provide government-recognized skill development training and issue Skill India certificates to graduates.</p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-green-600">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Government-recognized certificates</span>
+                  </div>
+                  <div className="flex items-center text-sm text-green-600">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>National qualification framework aligned</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="mt-12 bg-white rounded-lg shadow-md p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+              What This Means for You
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+                  <svg className="w-6 h-6 text-gb-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Government Validated Quality</h4>
+                <p className="text-sm text-gray-600">Both certifications represent government verification of our innovation and training quality standards.</p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-full mb-4">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Recognized Certifications</h4>
+                <p className="text-sm text-gray-600">Our training graduates receive government-recognized Skill India certificates valued across India.</p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-full mb-4">
+                  <svg className="w-6 h-6 text-gb-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Innovation Recognition</h4>
+                <p className="text-sm text-gray-600">Startup India certification validates our innovative approach in Analytics & Big Data sector.</p>
               </div>
             </div>
           </div>
