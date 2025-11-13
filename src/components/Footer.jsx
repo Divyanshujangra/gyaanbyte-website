@@ -112,22 +112,46 @@ const Footer = () => {
                 <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Info</h3>
                 <div className="mt-4 space-y-4">
                   <p className="text-base text-gray-500">
-                    1st Floor, Raj Singh Complex<br />
-                    Rohtak, Haryana, India
+                    <a href="tel:+918950709015" className="hover:text-gb-blue transition-colors flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                      +91 8950 709 015
+                    </a>
                   </p>
                   <p className="text-base text-gray-500">
-                    <a href="mailto:info@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors">
+                    <a href="mailto:info@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
                       info@gyaanbytelabs.com
                     </a>
                   </p>
                   <p className="text-base text-gray-500">
-                    Sales: <a href="mailto:sales@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors">
+                    <a href="mailto:sales@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                      </svg>
                       sales@gyaanbytelabs.com
                     </a>
                   </p>
+                  <p className="text-base text-gray-500 flex items-start">
+                    <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>
+                      1st Floor, Raj Singh Complex,<br />
+                      Near Sheela Bypass Flyover,<br />
+                      Rohtak 124001, Haryana, India
+                    </span>
+                  </p>
                   <p className="text-base text-gray-500">
-                    <a href="https://www.gyaanbytelabs.com" className="hover:text-gb-blue transition-colors">
-                      www.gyaanbytelabs.com
+                    <a href="https://share.google/NAyDAZsXGkJE7Axo9" target="_blank" rel="noopener noreferrer" className="hover:text-gb-blue transition-colors text-sm flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                      </svg>
+                      View on Google Maps
                     </a>
                   </p>
                 </div>
