@@ -92,21 +92,8 @@ const Contact = () => {
 
             {/* Subheading */}
             <p className="text-xl sm:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Get a <span className="font-bold text-white">free 30-minute consultation</span> with our founder to discuss your financial data challenges
+              Schedule a <span className="font-bold text-white">complimentary 30-minute consultation</span> to discuss your financial data infrastructure needs
             </p>
-
-            {/* Founder Access Callout */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
-              <div className="flex items-center justify-center gap-4 mb-3">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-2xl">
-                  👤
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold text-lg">Direct Founder Access</p>
-                  <p className="text-sm text-blue-100">No sales team — talk directly to Divyanshu</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -392,7 +379,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-2xl font-bold mb-3">Quick Response Guaranteed</h3>
                     <p className="text-orange-100 leading-relaxed">
-                      We understand your time is valuable. Expect a detailed response within 24 hours — not an automated reply, but a real answer from our team.
+                      Expect a detailed, personalized response within 24 hours from our technical team.
                     </p>
                   </div>
                 </div>
@@ -422,7 +409,7 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">We Review Your Request</h3>
               <p className="text-gray-600 leading-relaxed">
-                Divyanshu personally reviews every inquiry to understand your specific needs and challenges.
+                Our team carefully reviews every inquiry to understand your specific requirements and technical challenges.
               </p>
             </div>
 
@@ -431,9 +418,9 @@ const Contact = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-gb-orange-400 to-gb-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6 shadow-lg">
                 02
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation Call</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Consultation Call</h3>
               <p className="text-gray-600 leading-relaxed">
-                We schedule a 30-minute call to discuss your project, timeline, and budget — no sales pitch, just solutions.
+                We schedule a 30-minute consultation to discuss your project scope, timeline, and budget requirements.
               </p>
             </div>
 

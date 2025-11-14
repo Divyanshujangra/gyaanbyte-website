@@ -147,7 +147,7 @@ const Academy = () => {
               Why Train With Us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not a generic coding bootcamp. We specialize in <span className="font-semibold text-gray-900">financial data engineering</span> — a niche skill that's in high demand.
+              Our specialized training focuses on <span className="font-semibold text-gray-900">financial data engineering</span> — a high-demand niche where technical expertise meets business impact.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ const Academy = () => {
               Your Path to Employment
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We don't just train you — we help you land your first job in financial data engineering
+              From training to placement: a structured pathway to launch your career in financial data engineering
             </p>
           </div>
 

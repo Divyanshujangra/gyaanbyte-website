@@ -212,7 +212,7 @@ const Services = () => {
               Why <span className="text-gb-blue-600">GyaanByte</span> Labs?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Not just another vendor. Your trusted partner in financial data excellence.
+              Your partner in financial data excellence, delivering measurable results through proven expertise.
             </p>
           </div>
 
@@ -345,8 +345,8 @@ const Services = () => {
             Let's Discuss Your Project
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Free 30-minute consultation. No sales pitch. Just honest advice
-            on whether we're the right fit for your needs.
+            Schedule a complimentary 30-minute consultation to discuss your requirements
+            and explore how we can help achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
