@@ -1,180 +1,255 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  const services = [
+    { name: 'Data Migration', path: '/services' },
+    { name: 'Dashboard Development', path: '/services' },
+    { name: 'System Integration', path: '/services' },
+    { name: 'Consulting Services', path: '/services' }
+  ];
+
+  const company = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const academy = [
+    { name: '8-Week Program', path: '/academy' },
+    { name: 'Curriculum', path: '/academy#curriculum' },
+    { name: 'Apply Now', path: '/contact' }
+  ];
+
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="xl:col-span-1">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-1">
             <img
               src="/logos/gyaanbyte-logo.svg"
               alt="GyaanByte Labs"
-              className="h-10 w-auto mb-4"
+              className="h-12 w-auto mb-6 brightness-0 invert"
             />
-            <p className="text-gray-500 text-base max-w-md">
-              Financial Data Engineering Excellence. Bridging US accounting standards with Indian engineering talent.
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Financial data engineering excellence. Bridging US standards with Indian talent.
             </p>
-            <div className="flex space-x-6 mt-6">
-              <a href="https://www.linkedin.com/company/gyaanbytelabs/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gb-blue transition-colors">
-                <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+
+            {/* Government Badges */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-2 text-xs">
+                <div className="w-6 h-6 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-3 h-3 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-400">Startup India Certified</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs">
+                <div className="w-6 h-6 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <svg className="w-3 h-3 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-gray-400">Skill India Partner</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-4">
+              <a
+                href="https://www.linkedin.com/company/gyaanbytelabs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 hover:bg-gb-blue-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
-              <a href="mailto:info@gyaanbytelabs.com" className="text-gray-400 hover:text-gb-blue transition-colors">
-                <span className="sr-only">Email</span>
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <a
+                href="https://www.linkedin.com/in/divyanshu-jangra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/10 hover:bg-gb-orange-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110"
+                title="Founder's LinkedIn"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <a
+                href="mailto:info@gyaanbytelabs.com"
+                className="w-10 h-10 bg-white/10 hover:bg-purple-600 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </a>
             </div>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Services</h3>
-                <ul className="mt-4 space-y-4">
-                  <li>
-                    <a href="/services#migration" className="text-base text-gray-500 hover:text-gb-blue">
-                      Data Migration
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/services#dashboards" className="text-base text-gray-500 hover:text-gb-blue">
-                      Dashboard Development
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/services#integration" className="text-base text-gray-500 hover:text-gb-blue">
-                      System Integration
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/services#consulting" className="text-base text-gray-500 hover:text-gb-blue">
-                      Consulting
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Academy</h3>
-                <ul className="mt-4 space-y-4">
-                  <li>
-                    <a href="/academy" className="text-base text-gray-500 hover:text-gb-blue">
-                      Training Programs
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/academy#curriculum" className="text-base text-gray-500 hover:text-gb-blue">
-                      Curriculum
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/academy#success" className="text-base text-gray-500 hover:text-gb-blue">
-                      Success Stories
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/academy#apply" className="text-base text-gray-500 hover:text-gb-blue">
-                      Apply Now
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                <ul className="mt-4 space-y-4">
-                  <li>
-                    <a href="/about" className="text-base text-gray-500 hover:text-gb-blue">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/case-studies" className="text-base text-gray-500 hover:text-gb-blue">
-                      Case Studies
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/blog" className="text-base text-gray-500 hover:text-gb-blue">
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/contact" className="text-base text-gray-500 hover:text-gb-blue">
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact Info</h3>
-                <div className="mt-4 space-y-4">
-                  <p className="text-base text-gray-500">
-                    <a href="tel:+918950709015" className="hover:text-gb-blue transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+
+          {/* Services Column */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white">Services</h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-400 hover:text-gb-blue-400 transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Column */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
+            <ul className="space-y-3">
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.path}
+                    className="text-gray-400 hover:text-gb-orange-400 transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 bg-gb-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-bold mt-8 mb-6 text-white">Academy</h3>
+            <ul className="space-y-3">
+              {academy.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.path}
+                    className="text-gray-400 hover:text-green-400 transition-colors text-sm flex items-center gap-2 group"
+                  >
+                    <span className="w-1.5 h-1.5 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white">Get In Touch</h3>
+            <div className="space-y-4">
+              <a
+                href="tel:+918950709015"
+                className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group"
+              >
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gb-blue-600 transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-medium">Call Us</div>
+                  <div className="text-xs">+91 8950 709 015</div>
+                </div>
+              </a>
+
+              <a
+                href="mailto:info@gyaanbytelabs.com"
+                className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group"
+              >
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-purple-600 transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-medium">Email Us</div>
+                  <div className="text-xs">info@gyaanbytelabs.com</div>
+                </div>
+              </a>
+
+              <div className="flex items-start gap-3 text-gray-400">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-medium mb-1">Office</div>
+                  <div className="text-xs leading-relaxed">
+                    Rohtak, Haryana, India<br />
+                    <a
+                      href="https://share.google/NAyDAZsXGkJE7Axo9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gb-blue-400 hover:text-gb-blue-300 inline-flex items-center gap-1 mt-1"
+                    >
+                      View on Maps
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
-                      +91 8950 709 015
                     </a>
-                  </p>
-                  <p className="text-base text-gray-500">
-                    <a href="mailto:info@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      info@gyaanbytelabs.com
-                    </a>
-                  </p>
-                  <p className="text-base text-gray-500">
-                    <a href="mailto:sales@gyaanbytelabs.com" className="hover:text-gb-blue transition-colors flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                      </svg>
-                      sales@gyaanbytelabs.com
-                    </a>
-                  </p>
-                  <p className="text-base text-gray-500 flex items-start">
-                    <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span>
-                      1st Floor, Raj Singh Complex,<br />
-                      Near Sheela Bypass Flyover,<br />
-                      Rohtak 124001, Haryana, India
-                    </span>
-                  </p>
-                  <p className="text-base text-gray-500">
-                    <a href="https://share.google/NAyDAZsXGkJE7Axo9" target="_blank" rel="noopener noreferrer" className="hover:text-gb-blue transition-colors text-sm flex items-center">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                      </svg>
-                      View on Google Maps
-                    </a>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 hover:from-gb-blue-700 hover:to-gb-blue-800 text-white rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <span>Get Free Consultation</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
-        <div className="mt-12 border-t border-gray-200 pt-8">
-          <div className="flex justify-between items-center">
-            <p className="text-base text-gray-400">
-              &copy; 2025 GyaanByte Labs Pvt Ltd. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-gb-blue">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-gb-blue">
-                Terms of Service
-              </a>
+
+        {/* Divider */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Copyright */}
+            <div className="text-gray-500 text-sm">
+              <p>&copy; {currentYear} GyaanByte Labs Pvt Ltd. All rights reserved.</p>
+              <p className="text-xs mt-1">Startup India Certificate: DIPP228466</p>
             </div>
+
+            {/* Legal Links */}
+            <div className="flex gap-6 text-sm">
+              <Link to="/privacy" className="text-gray-500 hover:text-gray-300 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-500 hover:text-gray-300 transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+
+          {/* Made with love */}
+          <div className="mt-6 text-center">
+            <p className="text-xs text-gray-600">
+              Built with passion in Rohtak, India 🇮🇳 | Serving clients globally 🌍
+            </p>
           </div>
         </div>
       </div>
+
+      {/* Bottom Accent Bar */}
+      <div className="h-1 bg-gradient-to-r from-gb-blue-600 via-gb-orange-500 to-gb-blue-600"></div>
     </footer>
   );
 };

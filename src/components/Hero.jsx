@@ -1,166 +1,186 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <svg
-            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <polygon points="50,0 100,0 50,100 0,100" />
-          </svg>
-
-          <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="sm:text-center lg:text-left">
-              <div className="pt-8 sm:pt-12 lg:pt-16">
-                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block xl:inline">Transform Your</span>{' '}
-                  <span className="block text-gb-blue xl:inline">Financial Data</span>{' '}
-                  <span className="block xl:inline">Infrastructure</span>
-                </h1>
-                <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Expert QuickBooks migrations, Sage Intacct integrations, and custom financial dashboards for growing businesses.
-                  Bridging US accounting standards with Indian engineering talent.
-                </p>
-
-                {/* Government Certifications */}
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 lg:justify-start sm:justify-center">
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Startup India Recognized
-                  </div>
-                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-800 text-sm font-semibold">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    Skill India Partner
-                  </div>
-                </div>
-
-                {/* Key Benefits */}
-                <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 bg-gb-blue rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                    <span className="ml-2 text-sm font-medium text-gray-900">US Standards</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 bg-gb-blue rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                    <span className="ml-2 text-sm font-medium text-gray-900">Cost Advantage</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 bg-gb-blue rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                    <span className="ml-2 text-sm font-medium text-gray-900">24/7 Support</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <div className="w-6 h-6 bg-gb-blue rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </div>
-                    <span className="ml-2 text-sm font-medium text-gray-900">Proven Results</span>
-                  </div>
-                </div>
-
-                {/* CTA Buttons */}
-                <div className="mt-8 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <a
-                      href="/contact"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gb-blue hover:bg-blue-700 transition-colors md:py-4 md:text-lg md:px-10"
-                    >
-                      Get Free Consultation
-                    </a>
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <a
-                      href="/case-studies"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gb-blue bg-gray-50 hover:bg-gray-100 transition-colors md:py-4 md:text-lg md:px-10"
-                    >
-                      View Our Work
-                    </a>
-                  </div>
-                </div>
-
-                {/* Professional Credibility */}
-                <div className="mt-10 pt-8 border-t border-gray-200">
-                  <p className="text-sm font-semibold text-gray-900 mb-3">Trusted Experience</p>
-                  <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-gb-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>Ex-Accenture Professional</span>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-gb-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>IIT Patna Executive MTech</span>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-gb-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>Serving US & India Markets</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-        </div>
+    <div className="relative bg-gradient-to-br from-gb-blue-50 via-white to-gb-orange-50 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-gb-blue-200/20 to-transparent rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-gb-orange-200/20 to-transparent rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
       </div>
 
-      {/* Right side - Dashboard Preview */}
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <div className="h-56 w-full bg-gradient-to-r from-gb-blue to-gb-orange sm:h-72 md:h-96 lg:w-full lg:h-full flex items-center justify-center">
-          <div className="text-center text-white">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-8 max-w-md">
-              <h3 className="text-xl font-semibold mb-4">Financial Dashboard Preview</h3>
-              <div className="space-y-3">
-                <div className="bg-white/20 rounded p-3 text-left">
-                  <div className="text-sm opacity-75">Revenue This Month</div>
-                  <div className="text-2xl font-bold">$45,230</div>
-                </div>
-                <div className="bg-white/20 rounded p-3 text-left">
-                  <div className="text-sm opacity-75">Active Clients</div>
-                  <div className="text-2xl font-bold">127</div>
-                </div>
-                <div className="bg-white/20 rounded p-3 text-left">
-                  <div className="text-sm opacity-75">Data Accuracy</div>
-                  <div className="text-2xl font-bold">99.8%</div>
-                </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="animate-slide-up">
+            {/* Government Badges */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/80 backdrop-blur-sm text-blue-800 text-sm font-semibold shadow-sm hover:shadow-md transition-shadow">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Startup India
               </div>
-              <div className="mt-4 text-sm opacity-75">
-                Real-time financial insights for your business
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100/80 backdrop-blur-sm text-green-800 text-sm font-semibold shadow-sm hover:shadow-md transition-shadow">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Skill India Partner
               </div>
             </div>
+
+            {/* Main Heading */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+              <span className="block text-gray-900">Transform Your</span>
+              <span className="block bg-gradient-to-r from-gb-blue-600 to-gb-orange-500 bg-clip-text text-transparent">
+                Financial Data
+              </span>
+              <span className="block text-gray-900">Infrastructure</span>
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
+              Expert <span className="font-semibold text-gray-900">QuickBooks migrations</span>, <span className="font-semibold text-gray-900">Sage Intacct integrations</span>, and custom financial dashboards for growing businesses.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+              >
+                <span>Get Free Consultation</span>
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gb-blue-700 bg-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 border-2 border-gb-blue-100"
+              >
+                <span>Explore Services</span>
+              </Link>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {[
+                { icon: '⚡', label: 'Fast Delivery' },
+                { icon: '🌍', label: 'US Standards' },
+                { icon: '💰', label: 'Cost Efficient' },
+                { icon: '🎯', label: '99.9% Accuracy' }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 text-sm">
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="font-medium text-gray-700">{item.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Professional Credentials */}
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Founded by</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full"></span>
+                  <span>Ex-Accenture</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full"></span>
+                  <span>IIT Patna MTech</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full"></span>
+                  <span>US & India Markets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Interactive Dashboard Preview */}
+          <div className="relative lg:h-[600px] animate-slide-up" style={{animationDelay: '0.2s'}}>
+            {/* Main glass card */}
+            <div className="relative h-full bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-xl rounded-3xl p-8 shadow-glass-lg border border-white/30">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Financial Dashboard</h3>
+                  <p className="text-sm text-gray-600 mt-1">Real-time insights</p>
+                </div>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center shadow-lg animate-float">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="space-y-4">
+                {/* Revenue Card */}
+                <div className="bg-gradient-to-br from-gb-blue-500 to-gb-blue-600 rounded-2xl p-6 text-white shadow-xl transform hover:scale-105 transition-transform">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium opacity-90">Monthly Revenue</span>
+                    <span className="px-3 py-1 bg-white/20 rounded-full text-xs font-semibold">+12%</span>
+                  </div>
+                  <div className="text-4xl font-bold mb-1">$45,230</div>
+                  <div className="text-sm opacity-75">↑ $4,892 from last month</div>
+                </div>
+
+                {/* Two column grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Active Projects */}
+                  <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow">
+                    <div className="text-gb-orange-500 mb-2">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                    <div className="text-3xl font-bold text-gray-900 mb-1">127</div>
+                    <div className="text-sm text-gray-600">Active Clients</div>
+                  </div>
+
+                  {/* Accuracy */}
+                  <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow">
+                    <div className="text-green-500 mb-2">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <div className="text-3xl font-bold text-gray-900 mb-1">99.8%</div>
+                    <div className="text-sm text-gray-600">Data Accuracy</div>
+                  </div>
+                </div>
+
+                {/* Recent Activity */}
+                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-5 shadow-md">
+                  <div className="text-sm font-semibold text-gray-900 mb-3">Recent Activity</div>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'QuickBooks Migration', status: 'Completed', color: 'green' },
+                      { label: 'Dashboard Setup', status: 'In Progress', color: 'blue' },
+                      { label: 'Data Validation', status: 'Scheduled', color: 'gray' }
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-center justify-between">
+                        <span className="text-sm text-gray-700">{item.label}</span>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium bg-${item.color}-100 text-${item.color}-700`}>
+                          {item.status}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating badge */}
+              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-6 py-3 rounded-full shadow-xl transform rotate-3 hover:rotate-0 transition-transform">
+                <div className="text-xs font-semibold">Live Demo</div>
+              </div>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute -z-10 -top-8 -left-8 w-32 h-32 bg-gb-blue-200 rounded-full blur-2xl opacity-50 animate-float"></div>
+            <div className="absolute -z-10 -bottom-8 -right-8 w-40 h-40 bg-gb-orange-200 rounded-full blur-2xl opacity-50 animate-float" style={{animationDelay: '1s'}}></div>
           </div>
         </div>
       </div>

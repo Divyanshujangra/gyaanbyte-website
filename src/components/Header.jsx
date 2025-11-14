@@ -5,16 +5,16 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center group">
               <img
                 src="/logos/gyaanbyte-logo.svg"
                 alt="GyaanByte Labs"
-                className="h-10 w-auto"
+                className="h-10 w-auto transition-transform group-hover:scale-105"
               />
             </Link>
           </div>
@@ -34,20 +34,20 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/services" className="text-base font-medium text-gray-500 hover:text-gb-blue transition-colors">
+          <nav className="hidden md:flex space-x-1">
+            <Link to="/services" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               Services
             </Link>
-            <Link to="/academy" className="text-base font-medium text-gray-500 hover:text-gb-blue transition-colors">
+            <Link to="/academy" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               Academy
             </Link>
-            <Link to="/case-studies" className="text-base font-medium text-gray-500 hover:text-gb-blue transition-colors">
+            <Link to="/case-studies" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               Case Studies
             </Link>
-            <Link to="/about" className="text-base font-medium text-gray-500 hover:text-gb-blue transition-colors">
+            <Link to="/about" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               About
             </Link>
-            <Link to="/blog" className="text-base font-medium text-gray-500 hover:text-gb-blue transition-colors">
+            <Link to="/blog" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               Blog
             </Link>
           </nav>
@@ -56,7 +56,7 @@ const Header = () => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Link
               to="/contact"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gb-blue hover:bg-blue-700 transition-colors"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-6 py-2.5 border border-transparent rounded-lg shadow-sm text-base font-semibold text-white bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 hover:shadow-md transform hover:-translate-y-0.5 transition-all duration-200"
             >
               Get Free Consultation
             </Link>
