@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -119,90 +120,41 @@ const About = () => {
               </div>
               <div className="md:w-2/3 p-8">
                 <div className="mb-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Executive Profile</h4>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    Divyanshu brings deep expertise in financial data engineering, having led complex migration and integration projects for clients across the United States and India. With a background from premier organizations including Accenture and specialized experience in Sage Intacct, QuickBooks, and enterprise data systems, he founded GyaanByte Labs to deliver world-class financial data solutions.
+                    With expertise in financial data engineering and experience from Accenture, Divyanshu founded GyaanByte Labs to deliver world-class data migration and integration solutions for businesses across the United States and India.
                   </p>
                   <p className="text-gray-600 leading-relaxed">
-                    Currently pursuing an Executive MTech in Big Data and Blockchain from the Indian Institute of Technology, Patna, Divyanshu combines academic rigor with hands-on industry experience to drive innovation in financial technology.
+                    Currently pursuing an Executive MTech in Big Data & Blockchain from IIT Patna, he combines academic knowledge with hands-on industry experience to solve complex financial data challenges.
                   </p>
                 </div>
 
                 <div className="border-t border-gray-200 pt-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">Education</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">Education & Credentials</h4>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <svg className="w-5 h-5 text-gb-blue mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
                       </svg>
                       <div>
                         <p className="font-semibold text-gray-900">Executive MTech, Big Data & Blockchain</p>
-                        <p className="text-sm text-gray-600">Indian Institute of Technology, Patna (IIT Patna)</p>
-                        <p className="text-sm text-gray-500">2023 - 2025</p>
+                        <p className="text-sm text-gray-600">Indian Institute of Technology, Patna</p>
                       </div>
                     </div>
                     <div className="flex items-start">
                       <svg className="w-5 h-5 text-gb-blue mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       <div>
-                        <p className="font-semibold text-gray-900">BTech, Computer Science</p>
-                        <p className="text-sm text-gray-600">Dronacharya College of Engineering, Gurugram</p>
-                        <p className="text-sm text-gray-500">2017 - 2021</p>
+                        <p className="font-semibold text-gray-900">Ex-Accenture</p>
+                        <p className="text-sm text-gray-600">Led IOCL project, specialized in data engineering</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="border-t border-gray-200 pt-6 mt-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">Professional Experience</h4>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="font-semibold text-gray-900">Full Stack Engineer | Data Migration & Integration Specialist</p>
-                      <p className="text-sm text-gray-600">RXL Group, New York · May 2025 - Present</p>
-                      <p className="text-sm text-gray-500 mt-1">Leading financial data migration projects (Sage Intacct, QuickBooks) with direct client coordination and project ownership.</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Senior Data Engineer</p>
-                      <p className="text-sm text-gray-600">ISSC, Delhi · Sept 2024 - May 2025</p>
-                      <p className="text-sm text-gray-500 mt-1">Developed robust data integration pipelines for financial system migrations using DuckDB and Airflow.</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Senior Data Engineer (Business Intelligence Analyst)</p>
-                      <p className="text-sm text-gray-600">BluePi, Gurugram · Dec 2023 - Sept 2024</p>
-                      <p className="text-sm text-gray-500 mt-1">Leveraged Qlik Sense and Snowflake for healthcare analytics and reporting optimization.</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Data Engineer / Business Intelligence Analyst</p>
-                      <p className="text-sm text-gray-600">Accenture, Gurugram · Oct 2021 - Dec 2023</p>
-                      <p className="text-sm text-gray-500 mt-1">Led IOCL project, implementing comprehensive ETL processes and interactive dashboards using Informatica, Tableau, and Qlik Sense.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 pt-6 mt-6">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4">Certifications & Expertise</h4>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">Core Expertise</h4>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm text-gray-700">Qlik Sense</span>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm text-gray-700">Informatica</span>
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm text-gray-700">Snowflake Core</span>
-                    </div>
                     <div className="flex items-center">
                       <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -219,7 +171,25 @@ const About = () => {
                       <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
+                      <span className="text-sm text-gray-700">Data Migration</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
                       <span className="text-sm text-gray-700">ETL Engineering</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm text-gray-700">Business Intelligence</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm text-gray-700">Cloud Integration</span>
                     </div>
                   </div>
                 </div>
@@ -324,18 +294,18 @@ const About = () => {
             Let's discuss how we can solve your financial data challenges
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-gb-blue transition-colors"
             >
               Contact Us
-            </a>
-            <a
-              href="/services"
+            </Link>
+            <Link
+              to="/services"
               className="inline-flex items-center justify-center px-8 py-3 bg-white text-gb-blue font-semibold rounded-md hover:bg-blue-50 transition-colors"
             >
               View Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>

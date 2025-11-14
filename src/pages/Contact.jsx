@@ -23,7 +23,6 @@ const Contact = () => {
     e.preventDefault();
     // For now, just show success message
     // In production, this would send to a backend or email service
-    console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
