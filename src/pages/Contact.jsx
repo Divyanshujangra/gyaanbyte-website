@@ -66,7 +66,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-20 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white pt-20 pb-40 overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white to-transparent rounded-full blur-3xl animate-float"></div>
