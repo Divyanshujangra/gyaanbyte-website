@@ -66,7 +66,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white pt-20 pb-40 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-20 overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white to-transparent rounded-full blur-3xl animate-float"></div>
@@ -104,11 +104,11 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-8 -mt-24 mb-16">
             {contactMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className={`bg-gradient-to-r ${method.gradient} p-6 text-white text-center`}>
-                  <div className="text-6xl mb-3">{method.icon}</div>
+                <div className={`bg-gradient-to-r ${method.gradient} p-8 text-white text-center`}>
+                  <div className="text-6xl mb-4">{method.icon}</div>
                   <h3 className="text-xl font-bold">{method.title}</h3>
                 </div>
-                <div className="p-6 text-center">
+                <div className="p-8 text-center">
                   {method.primaryLink ? (
                     <a href={method.primaryLink} className="text-lg font-semibold text-gray-900 hover:text-gb-blue-600 transition-colors block mb-2">
                       {method.primary}
