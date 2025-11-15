@@ -8,12 +8,12 @@ const Home = () => {
       <Hero />
 
       {/* Services Bento Box Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-gb-blue-100 rounded-full blur-3xl opacity-30"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               Our <span className="bg-gradient-to-r from-gb-blue-600 to-gb-orange-500 bg-clip-text text-transparent">Services</span>
             </h2>
@@ -25,7 +25,7 @@ const Home = () => {
           {/* Bento Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Large Featured Card - Data Migration */}
-            <div className="md:col-span-2 lg:row-span-2 bg-gradient-to-br from-gb-blue-500 to-gb-blue-700 rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-1">
+            <div className="md:col-span-2 lg:row-span-2 bg-gradient-to-br from-gb-blue-500 to-gb-blue-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 group transform hover:-translate-y-1">
               <div className="flex items-start justify-between mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ const Home = () => {
             </div>
 
             {/* Dashboard Development */}
-            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-gb-orange-200 transform hover:-translate-y-1">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-gb-orange-200 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-gradient-to-br from-gb-orange-400 to-gb-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -82,7 +82,7 @@ const Home = () => {
             </div>
 
             {/* System Integration */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-green-100 transform hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-green-100 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
@@ -97,7 +97,7 @@ const Home = () => {
             </div>
 
             {/* Data Consulting */}
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-purple-100 transform hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 group border border-purple-100 transform hover:-translate-y-1">
               <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -112,7 +112,7 @@ const Home = () => {
             </div>
 
             {/* CTA Card */}
-            <div className="md:col-span-2 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 text-white shadow-xl flex items-center justify-between group hover:shadow-2xl transition-all">
+            <div className="md:col-span-2 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex items-center justify-between group hover:shadow-2xl transition-all">
               <div>
                 <h3 className="text-2xl font-bold mb-2">Need a custom solution?</h3>
                 <p className="text-gray-300">Let's discuss your unique requirements</p>
@@ -129,11 +129,11 @@ const Home = () => {
       </section>
 
       {/* Academy Section - Modern Card Design */}
-      <section className="py-20 bg-gradient-to-br from-gb-blue-50 via-white to-gb-orange-50 relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gb-blue-50 via-white to-gb-orange-50 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gb-orange-100 rounded-full blur-3xl opacity-30"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div className="animate-slide-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full mb-6">
@@ -150,18 +150,18 @@ const Home = () => {
                 </span>
               </h2>
 
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Transform your career with our intensive <span className="font-semibold text-gray-900">8-week financial data engineering program</span>. From zero to placement-ready.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {[
                   { icon: '🎓', label: 'Government Certified', value: 'Skill India' },
                   { icon: '⏱️', label: 'Duration', value: '8 Weeks' },
                   { icon: '👥', label: 'Batch Size', value: 'Max 10' },
                   { icon: '💼', label: 'Job Assistance', value: 'Included' }
                 ].map((item, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-4 shadow-md hover:shadow-lg transition-shadow">
+                  <div key={index} className="bg-white rounded-2xl p-3 sm:p-4 shadow-md hover:shadow-lg transition-shadow">
                     <div className="text-3xl mb-2">{item.icon}</div>
                     <div className="text-sm text-gray-500 mb-1">{item.label}</div>
                     <div className="font-bold text-gray-900">{item.value}</div>
@@ -190,7 +190,7 @@ const Home = () => {
 
             {/* Right - Course Features Card */}
             <div className="relative">
-              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-gray-100">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-bold text-gray-900">What You'll Learn</h3>
                   <div className="w-12 h-12 bg-gradient-to-br from-gb-blue-500 to-gb-blue-600 rounded-xl flex items-center justify-center">
@@ -254,9 +254,9 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {[
               { value: '50+', label: 'Projects Completed', icon: '🚀' },
               { value: '99.9%', label: 'Data Accuracy', icon: '🎯' },
@@ -276,7 +276,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gb-blue-600 to-gb-blue-800 text-white relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gb-blue-600 to-gb-blue-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yLTEuOCA0LTQgNHMtNC0xLjgtNC00IDEuOC00IDQtNCA0IDEuOCA0IDR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-10"></div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">

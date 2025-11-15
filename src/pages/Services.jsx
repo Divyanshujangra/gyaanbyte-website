@@ -80,7 +80,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Emphasize Trust */}
-      <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gb-blue-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gb-blue-900 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yLTEuOCA0LTQgNHMtNC0xLjgtNC00IDEuOC00IDQtNCA0IDEuOCA0IDR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
@@ -112,7 +112,7 @@ const Services = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">50+</div>
                 <div className="text-sm text-blue-200">Projects</div>
@@ -131,9 +131,9 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               Our Services
             </h2>
@@ -142,14 +142,14 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100"
               >
                 {/* Card Header */}
-                <div className={`bg-gradient-to-r ${service.color} p-6 text-white`}>
+                <div className={`bg-gradient-to-r ${service.color} p-4 sm:p-6 text-white`}>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-5xl">{service.icon}</span>
                     <span className="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
@@ -161,7 +161,7 @@ const Services = () => {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
@@ -205,9 +205,9 @@ const Services = () => {
       </section>
 
       {/* Why Choose GyaanByte - Emphasize Unique Value */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               Why <span className="text-gb-blue-600">GyaanByte</span> Labs?
             </h2>
@@ -216,7 +216,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Government Recognition */}
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -305,9 +305,9 @@ const Services = () => {
       </section>
 
       {/* Trust Building Section - Process */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               Our Proven Process
             </h2>
@@ -316,7 +316,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-6 md:gap-8">
             {[
               { step: '01', title: 'Discovery', desc: 'Free consultation. Understand your needs, timeline, budget.' },
               { step: '02', title: 'Planning', desc: 'Detailed project plan. Mapping, validation strategy, timeline.' },
@@ -324,7 +324,7 @@ const Services = () => {
               { step: '04', title: 'Support', desc: '30-day warranty. Training. Documentation. Always available.' }
             ].map((phase, index) => (
               <div key={index} className="relative">
-                <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="text-5xl font-bold text-gb-blue-200 mb-4">{phase.step}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{phase.title}</h3>
                   <p className="text-gray-600">{phase.desc}</p>
@@ -339,7 +339,7 @@ const Services = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-gb-blue-600 to-gb-blue-800 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-gb-blue-600 to-gb-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">
             Let's Discuss Your Project

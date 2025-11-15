@@ -27,8 +27,8 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 mb-8 sm:mb-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <img
@@ -96,8 +96,8 @@ const Footer = () => {
 
           {/* Services Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Services</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-bold mb-4 sm:mb-6 text-white">Services</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link
@@ -114,8 +114,8 @@ const Footer = () => {
 
           {/* Company Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-bold mb-4 sm:mb-6 text-white">Company</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {company.map((item, index) => (
                 <li key={index}>
                   <Link
@@ -129,8 +129,8 @@ const Footer = () => {
               ))}
             </ul>
 
-            <h3 className="text-lg font-bold mt-8 mb-6 text-white">Academy</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-bold mt-6 sm:mt-8 mb-4 sm:mb-6 text-white">Academy</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {academy.map((item, index) => (
                 <li key={index}>
                   <Link
@@ -147,8 +147,8 @@ const Footer = () => {
 
           {/* Contact Column */}
           <div>
-            <h3 className="text-lg font-bold mb-6 text-white">Get In Touch</h3>
-            <div className="space-y-4">
+            <h3 className="text-lg font-bold mb-4 sm:mb-6 text-white">Get In Touch</h3>
+            <div className="space-y-3 sm:space-y-4">
               <a
                 href="tel:+918950709015"
                 className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group"
@@ -209,7 +209,7 @@ const Footer = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 hover:from-gb-blue-700 hover:to-gb-blue-800 text-white rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+              className="mt-6 sm:mt-8 inline-flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 hover:from-gb-blue-700 hover:to-gb-blue-800 text-white rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
             >
               <span>Get Free Consultation</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,7 +221,7 @@ const Footer = () => {
 
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
             {/* Copyright */}
             <div className="text-gray-500 text-sm">
               <p>&copy; {currentYear} GyaanByte Labs Pvt Ltd. All rights reserved.</p>

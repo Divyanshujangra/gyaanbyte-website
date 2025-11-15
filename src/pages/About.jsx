@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Story Introduction */}
-      <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gray-900 text-white py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gray-900 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yLTEuOCA0LTQgNHMtNC0xLjgtNC00IDEuOC00IDQtNCA0IDEuOCA0IDR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
@@ -24,7 +24,7 @@ const About = () => {
             US accounting standards with Indian engineering excellence.
           </p>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="mt-8 sm:mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             {[
               { label: 'Founded', value: '2025' },
               { label: 'Projects', value: '50+' },
@@ -41,12 +41,12 @@ const About = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-5 lg:gap-12 items-center">
+          <div className="lg:grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             {/* Founder Image/Icon */}
             <div className="lg:col-span-2 mb-10 lg:mb-0">
-              <div className="bg-gradient-to-br from-gb-blue-500 to-gb-blue-700 rounded-3xl p-12 text-white shadow-2xl">
+              <div className="bg-gradient-to-br from-gb-blue-500 to-gb-blue-700 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
                 <div className="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
                   <span className="text-6xl font-bold text-gb-blue">DJ</span>
                 </div>
@@ -113,7 +113,7 @@ const About = () => {
                   work in specialized domains like financial data engineering.
                 </p>
 
-                <div className="bg-gb-blue-50 border-l-4 border-gb-blue-500 p-6 my-6">
+                <div className="bg-gb-blue-50 border-l-4 border-gb-blue-500 p-4 sm:p-6 my-6">
                   <p className="text-lg font-semibold text-gray-900 mb-2">
                     "Why not bridge both worlds?"
                   </p>
@@ -165,9 +165,9 @@ const About = () => {
       </section>
 
       {/* Government Recognition */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               Government <span className="text-gb-blue-600">Validated</span> Quality
             </h2>
@@ -176,9 +176,9 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Startup India */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-200">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 sm:p-8 border-2 border-blue-200">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -208,7 +208,7 @@ const About = () => {
             </div>
 
             {/* Skill India */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 border-2 border-green-200">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 sm:p-8 border-2 border-green-200">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -241,9 +241,9 @@ const About = () => {
       </section>
 
       {/* Why Trust Us */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
               Why Clients Trust Us
             </h2>
@@ -252,8 +252,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">🎓</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Academic Excellence</h3>
               <p className="text-gray-600">
@@ -262,7 +262,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">💼</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise Experience</h3>
               <p className="text-gray-600">
@@ -271,7 +271,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
               <div className="text-5xl mb-4">🤝</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Founder-Led</h3>
               <p className="text-gray-600">
@@ -284,9 +284,9 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-br from-gb-blue-600 to-gb-blue-800 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gb-blue-600 to-gb-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             <div>
               <h2 className="text-3xl font-extrabold mb-6">Our Mission</h2>
               <p className="text-lg text-blue-100 leading-relaxed">
@@ -308,7 +308,7 @@ const About = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
             Want to Be Part of the Story?

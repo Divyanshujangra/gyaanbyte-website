@@ -70,7 +70,7 @@ const Academy = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-20 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white to-transparent rounded-full blur-3xl animate-float"></div>
@@ -126,9 +126,9 @@ const Academy = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
               {outcomes.map((outcome, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 border border-white/20">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-white/20">
                   <div className="text-4xl mb-2">{outcome.icon}</div>
                   <div className="text-2xl font-bold mb-1">{outcome.metric}</div>
                   <div className="text-sm text-blue-100">{outcome.description}</div>
@@ -140,9 +140,9 @@ const Academy = () => {
       </div>
 
       {/* Why GyaanByte Academy */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               Why Train With Us?
             </h2>
@@ -151,16 +151,16 @@ const Academy = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className={`bg-gradient-to-r ${benefit.gradient} p-6 text-white`}>
+                <div className={`bg-gradient-to-r ${benefit.gradient} p-4 sm:p-6 text-white`}>
                   <div className="flex items-center gap-4">
                     <div className="text-5xl">{benefit.icon}</div>
                     <h3 className="text-2xl font-bold">{benefit.title}</h3>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <p className="text-gray-700 text-lg leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
@@ -168,7 +168,7 @@ const Academy = () => {
           </div>
 
           {/* Special Callout */}
-          <div className="mt-12 bg-gradient-to-br from-gb-orange-50 to-gb-blue-50 rounded-3xl p-8 border-2 border-gb-orange-200">
+          <div className="mt-8 sm:mt-12 bg-gradient-to-br from-gb-orange-50 to-gb-blue-50 rounded-3xl p-6 sm:p-8 border-2 border-gb-orange-200">
             <div className="flex items-start gap-4">
               <div className="text-4xl">💡</div>
               <div>
@@ -184,9 +184,9 @@ const Academy = () => {
       </section>
 
       {/* Curriculum Section */}
-      <section id="curriculum" className="py-20 bg-white">
+      <section id="curriculum" className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               8-Week Learning Journey
             </h2>
@@ -195,12 +195,12 @@ const Academy = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {curriculum.map((module, index) => (
-              <div key={index} className="group bg-gradient-to-r from-gray-50 to-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div key={index} className="group bg-gradient-to-r from-gray-50 to-white rounded-3xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
                 <div className="flex flex-col md:flex-row md:items-center gap-6">
                   {/* Icon & Week */}
-                  <div className={`flex-shrink-0 bg-gradient-to-br ${module.color} rounded-2xl p-6 text-white text-center shadow-lg`}>
+                  <div className={`flex-shrink-0 bg-gradient-to-br ${module.color} rounded-2xl p-4 sm:p-6 text-white text-center shadow-lg`}>
                     <div className="text-5xl mb-2">{module.icon}</div>
                     <div className="text-sm font-semibold">{module.week}</div>
                   </div>
@@ -231,7 +231,7 @@ const Academy = () => {
           </div>
 
           {/* Final Project Highlight */}
-          <div className="mt-12 bg-gradient-to-br from-gb-blue-500 to-purple-600 rounded-3xl p-10 text-white shadow-2xl">
+          <div className="mt-8 sm:mt-12 bg-gradient-to-br from-gb-blue-500 to-purple-600 rounded-3xl p-6 sm:p-10 text-white shadow-2xl">
             <div className="flex items-start gap-6">
               <div className="text-6xl">🏆</div>
               <div>
@@ -253,9 +253,9 @@ const Academy = () => {
       </section>
 
       {/* Path to Employment */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
               Your Path to Employment
             </h2>
@@ -264,10 +264,10 @@ const Academy = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {/* Step 1 */}
             <div className="relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-gb-blue-400 to-gb-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">
                   01
                 </div>
@@ -286,7 +286,7 @@ const Academy = () => {
 
             {/* Step 2 */}
             <div className="relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-gb-orange-400 to-gb-orange-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg">
                   02
                 </div>
@@ -304,7 +304,7 @@ const Academy = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 shadow-lg text-white">
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-6 sm:p-8 shadow-lg text-white">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-2xl font-bold mb-6">
                 03
               </div>
@@ -322,8 +322,8 @@ const Academy = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-12 grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-md border-2 border-blue-100">
+          <div className="mt-8 sm:mt-12 grid md:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md border-2 border-blue-100">
               <h4 className="text-xl font-bold text-gray-900 mb-3">For Top Performers</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
@@ -347,7 +347,7 @@ const Academy = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-md border-2 border-orange-100">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-md border-2 border-orange-100">
               <h4 className="text-xl font-bold text-gray-900 mb-3">For All Graduates</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
@@ -375,7 +375,7 @@ const Academy = () => {
       </section>
 
       {/* Enrollment CTA */}
-      <section className="py-20 bg-gradient-to-br from-gb-blue-600 to-purple-700 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gb-blue-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-8">
             <span className="relative flex h-3 w-3">
@@ -393,7 +393,7 @@ const Academy = () => {
           </p>
 
           {/* Pricing Card */}
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border-2 border-white/30 mb-10 max-w-md mx-auto">
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 border-2 border-white/30 mb-10 max-w-md mx-auto">
             <div className="text-sm font-semibold text-blue-200 mb-2">Program Fee</div>
             <div className="text-6xl font-extrabold mb-4">₹12,000</div>
             <div className="text-blue-100 mb-6">One-time payment • No hidden costs</div>

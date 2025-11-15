@@ -11,7 +11,7 @@ const Hero = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className="animate-slide-up">
             {/* Government Badges */}
@@ -79,7 +79,7 @@ const Hero = () => {
             </div>
 
             {/* Professional Credentials */}
-            <div className="mt-8 pt-8 border-t border-gray-200">
+            <div className="mt-6 pt-6 sm:mt-8 sm:pt-8 border-t border-gray-200">
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Founded by</p>
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
@@ -101,7 +101,7 @@ const Hero = () => {
           {/* Right Side - Interactive Dashboard Preview */}
           <div className="relative lg:h-[600px] animate-slide-up" style={{animationDelay: '0.2s'}}>
             {/* Main glass card */}
-            <div className="relative h-full bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-xl rounded-3xl p-8 shadow-glass-lg border border-white/30">
+            <div className="relative h-full bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-xl rounded-3xl p-4 sm:p-6 lg:p-8 shadow-glass-lg border border-white/30">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div>

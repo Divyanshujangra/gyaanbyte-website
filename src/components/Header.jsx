@@ -34,7 +34,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1">
+          <nav className="hidden md:flex space-x-2">
             <Link to="/services" className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-gb-blue hover:bg-gb-blue-50 transition-all">
               Services
             </Link>
@@ -68,7 +68,7 @@ const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
+            <div className="p-6">
               <div className="flex items-center justify-between">
                 <img
                   src="/logos/gyaanbyte-logo.svg"
@@ -89,7 +89,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid gap-y-8">
+                <nav className="grid gap-y-4">
                   <Link to="/services" className="text-base font-medium text-gray-900 hover:text-gb-blue" onClick={() => setIsMenuOpen(false)}>
                     Services
                   </Link>

@@ -101,14 +101,14 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 -mt-24 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 -mt-20 sm:-mt-24 mb-12 sm:mb-16">
             {contactMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className={`bg-gradient-to-r ${method.gradient} p-6 text-white text-center`}>
+                <div className={`bg-gradient-to-r ${method.gradient} p-4 sm:p-6 text-white text-center`}>
                   <div className="text-6xl mb-3">{method.icon}</div>
                   <h3 className="text-xl font-bold">{method.title}</h3>
                 </div>
-                <div className="p-6 text-center">
+                <div className="p-4 sm:p-6 text-center">
                   {method.primaryLink ? (
                     <a href={method.primaryLink} className="text-lg font-semibold text-gray-900 hover:text-gb-blue-600 transition-colors block mb-2">
                       {method.primary}
@@ -129,9 +129,9 @@ const Contact = () => {
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-lg p-8 border border-gray-100">
+            <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-8 border border-gray-100">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-3">Send Us a Message</h2>
                 <p className="text-gray-600 text-lg">
@@ -153,7 +153,7 @@ const Contact = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -390,7 +390,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ / Why Contact Us */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
