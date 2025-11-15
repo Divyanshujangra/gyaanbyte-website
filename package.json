@@ -1,12 +1,33 @@
 {
   "name": "gyaanbyte-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Official website for GyaanByte Labs - Financial data engineering excellence. QuickBooks migrations, Sage Intacct integrations, and custom financial dashboards.",
+  "author": {
+    "name": "GyaanByte Labs Pvt Ltd",
+    "email": "info@gyaanbytelabs.com",
+    "url": "https://www.gyaanbytelabs.com"
+  },
+  "keywords": [
+    "quickbooks",
+    "sage-intacct",
+    "financial-data",
+    "data-migration",
+    "dashboard",
+    "business-intelligence",
+    "accounting-software",
+    "erp-integration"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyaanbytelabs/website.git"
+  },
   "scripts": {
     "dev": "vite --port 3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
