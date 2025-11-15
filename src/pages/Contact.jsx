@@ -12,7 +12,11 @@ const Contact = () => {
     message: ''
   });
 
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
   const timeoutRef = useRef(null);
 
   // Cleanup timeout on component unmount
@@ -24,34 +28,163 @@ const Contact = () => {
     };
   }, []);
 
+  // Validation functions
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    // Allow various phone formats: +91 XXXXX XXXXX, XXXXXXXXXX, etc.
+    const phoneRegex = /^[\d\s+()-]{10,}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const sanitizeInput = (value) => {
+    // Remove any potentially harmful characters
+    return value.trim().replace(/[<>]/g, '');
+  };
+
+  const validateField = (name, value) => {
+    switch (name) {
+      case 'name':
+        if (!value.trim()) return 'Name is required';
+        if (value.trim().length < 2) return 'Name must be at least 2 characters';
+        return '';
+
+      case 'email':
+        if (!value.trim()) return 'Email is required';
+        if (!validateEmail(value)) return 'Please enter a valid email address';
+        return '';
+
+      case 'phone':
+        if (!value.trim()) return 'Phone number is required';
+        if (!validatePhone(value)) return 'Please enter a valid phone number (min 10 digits)';
+        return '';
+
+      case 'message':
+        if (!value.trim()) return 'Message is required';
+        if (value.trim().length < 10) return 'Message must be at least 10 characters';
+        return '';
+
+      default:
+        return '';
+    }
+  };
+
   const handleChange = (e) => {
+    const { name, value } = e.target;
+    const sanitizedValue = sanitizeInput(value);
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: sanitizedValue
+    });
+
+    // Validate on change if field was touched
+    if (touched[name]) {
+      const error = validateField(name, sanitizedValue);
+      setErrors({
+        ...errors,
+        [name]: error
+      });
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+
+    setTouched({
+      ...touched,
+      [name]: true
+    });
+
+    const error = validateField(name, value);
+    setErrors({
+      ...errors,
+      [name]: error
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitError(null);
 
-    // Clear any existing timeout
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
+    // Validate all fields
+    const newErrors = {};
+    Object.keys(formData).forEach(key => {
+      const error = validateField(key, formData[key]);
+      if (error) newErrors[key] = error;
+    });
+
+    // Mark all fields as touched
+    const allTouched = {};
+    Object.keys(formData).forEach(key => {
+      allTouched[key] = true;
+    });
+    setTouched(allTouched);
+
+    // If there are errors, don't submit
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
     }
 
-    timeoutRef.current = setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: ''
+    setIsSubmitting(true);
+
+    try {
+      // Submit to Web3Forms
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || 'Not provided',
+          service: formData.service || 'Not specified',
+          message: formData.message,
+          from_name: 'GyaanByte Website Contact Form',
+          subject: `New Contact Form Submission from ${formData.name}`,
+        }),
       });
-      timeoutRef.current = null;
-    }, 5000);
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: ''
+        });
+        setErrors({});
+        setTouched({});
+
+        // Clear success message after 5 seconds
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+
+        timeoutRef.current = setTimeout(() => {
+          setSubmitted(false);
+          timeoutRef.current = null;
+        }, 5000);
+      } else {
+        setSubmitError('Failed to send message. Please try again or email us directly.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
@@ -178,6 +311,13 @@ const Contact = () => {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                {/* Show submit error if any */}
+                {submitError && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                    <p className="text-red-700 text-sm">{submitError}</p>
+                  </div>
+                )}
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -187,12 +327,19 @@ const Contact = () => {
                       type="text"
                       id="name"
                       name="name"
-                      required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
+                      onBlur={handleBlur}
+                      className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                        errors.name && touched.name
+                          ? 'border-red-300 focus:border-red-500'
+                          : 'border-gray-200 focus:border-gb-blue-500'
+                      }`}
                       placeholder="John Doe"
                     />
+                    {errors.name && touched.name && (
+                      <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                    )}
                   </div>
 
                   <div>
@@ -203,19 +350,26 @@ const Contact = () => {
                       type="email"
                       id="email"
                       name="email"
-                      required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
+                      onBlur={handleBlur}
+                      className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                        errors.email && touched.email
+                          ? 'border-red-300 focus:border-red-500'
+                          : 'border-gray-200 focus:border-gb-blue-500'
+                      }`}
                       placeholder="john@company.com"
                     />
+                    {errors.email && touched.email && (
+                      <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="tel"
@@ -223,9 +377,17 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
-                      placeholder="+1 (555) 000-0000"
+                      onBlur={handleBlur}
+                      className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                        errors.phone && touched.phone
+                          ? 'border-red-300 focus:border-red-500'
+                          : 'border-gray-200 focus:border-gb-blue-500'
+                      }`}
+                      placeholder="+91 XXXXX XXXXX"
                     />
+                    {errors.phone && touched.phone && (
+                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                    )}
                   </div>
 
                   <div>
@@ -272,24 +434,48 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    required
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all resize-none"
+                    onBlur={handleBlur}
+                    className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all resize-none ${
+                      errors.message && touched.message
+                        ? 'border-red-300 focus:border-red-500'
+                        : 'border-gray-200 focus:border-gb-blue-500'
+                    }`}
                     placeholder="What challenges are you facing? What are your goals?"
                   />
+                  {errors.message && touched.message && (
+                    <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
+                  disabled={isSubmitting}
+                  className={`w-full px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 ${
+                    isSubmitting
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 text-white hover:shadow-xl transform hover:-translate-y-0.5'
+                  }`}
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Send Message
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </>
+                    )}
                   </span>
                 </button>
 
