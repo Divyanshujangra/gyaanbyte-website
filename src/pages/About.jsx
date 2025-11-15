@@ -1,9 +1,15 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Us"
+        description="Learn about GyaanByte Labs - Founded by Ex-Accenture professionals with IIT Patna MTech. Startup India & Skill India certified. Bridging US accounting standards with Indian engineering excellence."
+        keywords="about gyaanbyte, startup india, skill india, ex-accenture, IIT patna, financial data engineering company, divyanshu jangra"
+        canonical="/about"
+      />
       {/* Hero Section - Story Introduction */}
       <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gray-900 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE2YzAgMi4yLTEuOCA0LTQgNHMtNC0xLjgtNC00IDEuOC00IDQtNCA0IDEuOCA0IDR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>

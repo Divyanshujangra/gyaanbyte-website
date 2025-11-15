@@ -1,0 +1,6 @@
+# robots.txt for GyaanByte Labs
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.gyaanbytelabs.com/sitemap.xml

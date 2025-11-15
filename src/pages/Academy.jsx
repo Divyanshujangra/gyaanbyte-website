@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Academy = () => {
   const curriculum = [
@@ -69,6 +69,12 @@ const Academy = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Training Academy"
+        description="8-week intensive financial data engineering program. ₹12,000 fee. Skill India certified. Learn QuickBooks, Sage Intacct, data migration, dashboards. Job placement assistance included."
+        keywords="financial data engineering training, skill india, quickbooks training, sage intacct course, data engineering bootcamp, job placement, internship program"
+        canonical="/academy"
+      />
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         {/* Animated background */}

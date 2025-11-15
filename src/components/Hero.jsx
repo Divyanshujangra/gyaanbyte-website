@@ -1,7 +1,7 @@
-import React from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-const Hero = () => {
+const Hero = memo(() => {
   return (
     <div className="relative bg-gradient-to-br from-gb-blue-50 via-white to-gb-orange-50 overflow-hidden">
       {/* Animated background elements */}
@@ -157,13 +157,13 @@ const Hero = () => {
                   <div className="text-sm font-semibold text-gray-900 mb-3">Recent Activity</div>
                   <div className="space-y-3">
                     {[
-                      { label: 'QuickBooks Migration', status: 'Completed', color: 'green' },
-                      { label: 'Dashboard Setup', status: 'In Progress', color: 'blue' },
-                      { label: 'Data Validation', status: 'Scheduled', color: 'gray' }
+                      { label: 'QuickBooks Migration', status: 'Completed', colorClass: 'bg-green-100 text-green-700' },
+                      { label: 'Dashboard Setup', status: 'In Progress', colorClass: 'bg-blue-100 text-blue-700' },
+                      { label: 'Data Validation', status: 'Scheduled', colorClass: 'bg-gray-100 text-gray-700' }
                     ].map((item, index) => (
                       <div key={index} className="flex items-center justify-between">
                         <span className="text-sm text-gray-700">{item.label}</span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium bg-${item.color}-100 text-${item.color}-700`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${item.colorClass}`}>
                           {item.status}
                         </span>
                       </div>
@@ -186,6 +186,8 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+});
+
+Hero.displayName = 'Hero';
 
 export default Hero;

@@ -1,10 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
     <div>
+      <SEO
+        title="Home"
+        description="Expert QuickBooks migrations, Sage Intacct integrations, and custom financial dashboards. Government-certified training programs. Startup India & Skill India recognized."
+        keywords="QuickBooks migration, Sage Intacct, financial data engineering, dashboard development, data migration, financial training, skill india, startup india"
+        canonical="/"
+      />
       <Hero />
 
       {/* Services Bento Box Section */}

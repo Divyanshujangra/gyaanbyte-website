@@ -1,7 +1,7 @@
-import React from 'react';
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = memo(() => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -252,6 +252,8 @@ const Footer = () => {
       <div className="h-1 bg-gradient-to-r from-gb-blue-600 via-gb-orange-500 to-gb-blue-600"></div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

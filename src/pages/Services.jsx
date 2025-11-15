@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Services = () => {
   const services = [
@@ -79,6 +79,12 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Services"
+        description="QuickBooks to Sage Intacct migration ($3K-5K), Financial Dashboards ($2K-8K), System Integration & ETL. Transparent pricing, clear timelines, 99.9% accuracy guaranteed."
+        keywords="quickbooks migration, sage intacct migration, financial dashboards, system integration, etl services, data migration pricing, accounting software migration"
+        canonical="/services"
+      />
       {/* Hero Section - Emphasize Trust */}
       <section className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-gb-blue-900 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
         {/* Background pattern */}

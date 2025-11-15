@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,16 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const timeoutRef = useRef(null);
+
+  // Cleanup timeout on component unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,7 +34,13 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => {
+
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
       setSubmitted(false);
       setFormData({
         name: '',
@@ -33,6 +50,7 @@ const Contact = () => {
         service: '',
         message: ''
       });
+      timeoutRef.current = null;
     }, 5000);
   };
 
@@ -65,6 +83,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with GyaanByte Labs. Call +91 8950 709 015 or email info@gyaanbytelabs.com. Free consultation for QuickBooks & Sage Intacct projects. Response time < 4 hours."
+        keywords="contact gyaanbyte, quickbooks consultant, sage intacct expert, financial data services, free consultation, rohtak haryana"
+        canonical="/contact"
+      />
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white pt-20 pb-32 overflow-hidden">
         {/* Animated background */}
