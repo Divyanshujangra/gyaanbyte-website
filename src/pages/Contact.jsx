@@ -189,7 +189,11 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: '📞',
+      icon: (
+        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+      ),
       title: 'Call Us',
       primary: '+91 8950 709 015',
       primaryLink: 'tel:+918950709015',
@@ -197,7 +201,11 @@ const Contact = () => {
       gradient: 'from-gb-blue-500 to-gb-blue-600'
     },
     {
-      icon: '📧',
+      icon: (
+        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
       title: 'Email Us',
       primary: 'info@gyaanbytelabs.com',
       primaryLink: 'mailto:info@gyaanbytelabs.com',
@@ -206,7 +214,12 @@ const Contact = () => {
       gradient: 'from-purple-500 to-purple-600'
     },
     {
-      icon: '📍',
+      icon: (
+        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
       title: 'Visit Us',
       primary: 'Rohtak, Haryana, India',
       secondary: '1st Floor, Raj Singh Complex',
@@ -262,7 +275,7 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
                 <div className={`bg-gradient-to-r ${method.gradient} p-4 sm:p-6 text-white text-center`}>
-                  <div className="text-6xl mb-3">{method.icon}</div>
+                  <div className="flex justify-center mb-3">{method.icon}</div>
                   <h3 className="text-xl font-bold">{method.title}</h3>
                 </div>
                 <div className="p-4 sm:p-6 text-center">
@@ -525,7 +538,10 @@ const Contact = () => {
               {/* Government Recognition */}
               <div className="bg-gradient-to-br from-gb-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg border-2 border-gb-blue-200">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <span className="text-2xl">🏛️</span>
+                  <svg className="w-6 h-6 text-gb-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                    <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                  </svg>
                   Government Recognized
                 </h3>
                 <div className="space-y-4">
@@ -558,7 +574,9 @@ const Contact = () => {
               {/* Business Hours */}
               <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <span className="text-2xl">🕐</span>
+                  <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                   Business Hours
                 </h3>
                 <div className="space-y-3">
@@ -577,7 +595,12 @@ const Contact = () => {
                 </div>
                 <div className="mt-6 bg-gb-blue-50 rounded-xl p-4">
                   <p className="text-sm text-gray-700">
-                    <span className="font-semibold text-gray-900">🌎 International Clients:</span> We serve US clients across all time zones. Calls can be scheduled outside regular hours via email.
+                    <span className="font-semibold text-gray-900 inline-flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" />
+                      </svg>
+                      International Clients:
+                    </span> We serve US clients across all time zones. Calls can be scheduled outside regular hours via email.
                   </p>
                 </div>
               </div>
@@ -585,7 +608,9 @@ const Contact = () => {
               {/* Quick Response Promise */}
               <div className="bg-gradient-to-br from-gb-orange-500 to-gb-orange-600 rounded-3xl p-8 text-white shadow-xl">
                 <div className="flex items-start gap-4">
-                  <div className="text-5xl">⚡</div>
+                  <svg className="w-12 h-12 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
                   <div>
                     <h3 className="text-2xl font-bold mb-3">Quick Response Guaranteed</h3>
                     <p className="text-orange-100 leading-relaxed">
