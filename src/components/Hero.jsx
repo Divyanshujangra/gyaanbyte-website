@@ -177,7 +177,7 @@ const Hero = memo(() => {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-6 py-3 rounded-full shadow-xl transform rotate-3 hover:rotate-0 transition-transform">
+              <div className="absolute -top-6 -right-6 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-6 py-3 rounded-full shadow-xl transform rotate-3 hover:rotate-0 transition-transform z-10">
                 <div className="text-xs font-semibold">Live Demo</div>
               </div>
             </div>

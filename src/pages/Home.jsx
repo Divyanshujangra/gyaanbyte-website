@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import SEO from '../components/SEO';
+import { RocketIcon, TargetIcon, LightningIcon, ChartIcon, GraduationIcon, TimerIcon, UsersIcon, BriefcaseIcon } from '../components/Icons';
 
 const Home = () => {
   return (
@@ -162,17 +163,20 @@ const Home = () => {
 
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {[
-                  { icon: '🎓', label: 'Government Certified', value: 'Skill India' },
-                  { icon: '⏱️', label: 'Duration', value: '8 Weeks' },
-                  { icon: '👥', label: 'Batch Size', value: 'Max 10' },
-                  { icon: '💼', label: 'Job Assistance', value: 'Included' }
-                ].map((item, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-3 sm:p-4 shadow-md hover:shadow-lg transition-shadow">
-                    <div className="text-3xl mb-2">{item.icon}</div>
-                    <div className="text-sm text-gray-500 mb-1">{item.label}</div>
-                    <div className="font-bold text-gray-900">{item.value}</div>
-                  </div>
-                ))}
+                  { icon: GraduationIcon, label: 'Government Certified', value: 'Skill India' },
+                  { icon: TimerIcon, label: 'Duration', value: '8 Weeks' },
+                  { icon: UsersIcon, label: 'Batch Size', value: 'Max 10' },
+                  { icon: BriefcaseIcon, label: 'Job Assistance', value: 'Included' }
+                ].map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={index} className="bg-white rounded-2xl p-3 sm:p-4 shadow-md hover:shadow-lg transition-shadow">
+                      <IconComponent className="w-8 h-8 text-gb-blue-600 mb-2" />
+                      <div className="text-sm text-gray-500 mb-1">{item.label}</div>
+                      <div className="font-bold text-gray-900">{item.value}</div>
+                    </div>
+                  );
+                })}
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -264,19 +268,22 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {[
-              { value: '50+', label: 'Projects Completed', icon: '🚀' },
-              { value: '99.9%', label: 'Data Accuracy', icon: '🎯' },
-              { value: '24/7', label: 'Support Available', icon: '⚡' },
-              { value: '2M+', label: 'Records Migrated', icon: '📊' }
-            ].map((stat, index) => (
-              <div key={index} className="text-center animate-scale-in" style={{animationDelay: `${index * 0.1}s`}}>
-                <div className="text-4xl mb-2">{stat.icon}</div>
-                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-gb-blue-400 to-gb-orange-400 bg-clip-text text-transparent">
-                  {stat.value}
+              { value: '50+', label: 'Projects Completed', icon: RocketIcon },
+              { value: '99.9%', label: 'Data Accuracy', icon: TargetIcon },
+              { value: '24/7', label: 'Support Available', icon: LightningIcon },
+              { value: '2M+', label: 'Records Migrated', icon: ChartIcon }
+            ].map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center animate-scale-in" style={{animationDelay: `${index * 0.1}s`}}>
+                  <IconComponent className="w-12 h-12 text-gb-orange-400 mx-auto mb-2" />
+                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-gb-blue-400 to-gb-orange-400 bg-clip-text text-transparent">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-400">{stat.label}</div>
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

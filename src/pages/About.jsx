@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { IndiaFlagIcon, AcademicCapIcon, BriefcaseIcon, UsersIcon } from '../components/Icons';
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 text-sm font-semibold">
-            <span>🇮🇳</span>
+            <IndiaFlagIcon className="w-6 h-6" />
             <span>Est. 2025 · Rohtak, Haryana</span>
           </div>
 
@@ -260,7 +261,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4">🎓</div>
+              <AcademicCapIcon className="w-12 h-12 mx-auto mb-4 text-gb-blue-600" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Academic Excellence</h3>
               <p className="text-gray-600">
                 IIT Patna Executive MTech in Big Data & Blockchain.
@@ -269,7 +270,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4">💼</div>
+              <BriefcaseIcon className="w-12 h-12 mx-auto mb-4 text-gb-blue-600" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Enterprise Experience</h3>
               <p className="text-gray-600">
                 Ex-Accenture professional. Led IOCL data engineering projects.
@@ -278,7 +279,7 @@ const About = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center hover:shadow-xl transition-shadow">
-              <div className="text-5xl mb-4">🤝</div>
+              <UsersIcon className="w-12 h-12 mx-auto mb-4 text-gb-blue-600" />
               <h3 className="text-xl font-bold text-gray-900 mb-3">Founder-Led</h3>
               <p className="text-gray-600">
                 Not a faceless corporation. Direct access to the founder.

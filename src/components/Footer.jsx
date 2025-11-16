@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { IndiaFlagIcon, GlobeIcon } from './Icons';
 
 const Footer = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -241,8 +242,12 @@ const Footer = memo(() => {
 
           {/* Made with love */}
           <div className="mt-6 text-center">
-            <p className="text-xs text-gray-600">
-              Built with passion in Rohtak, India 🇮🇳 | Serving clients globally 🌍
+            <p className="text-xs text-gray-600 flex items-center justify-center gap-2">
+              <span>Built with passion in Rohtak, India</span>
+              <IndiaFlagIcon className="w-4 h-4 inline" />
+              <span>|</span>
+              <span>Serving clients globally</span>
+              <GlobeIcon className="w-4 h-4 inline text-gray-500" />
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { PackageIcon, ChartIcon, LinkIcon, DatabaseIcon } from '../components/Icons';
 
 const Services = () => {
   const services = [
@@ -18,7 +19,7 @@ const Services = () => {
       ],
       pricing: "$3,000 - $5,000",
       timeline: "4-6 weeks",
-      icon: "🔄",
+      icon: PackageIcon,
       color: "from-gb-blue-500 to-gb-blue-700"
     },
     {
@@ -36,7 +37,7 @@ const Services = () => {
       ],
       pricing: "$3,000 - $5,000",
       timeline: "4-6 weeks",
-      icon: "↩️",
+      icon: DatabaseIcon,
       color: "from-gb-orange-500 to-gb-orange-700"
     },
     {
@@ -54,7 +55,7 @@ const Services = () => {
       ],
       pricing: "$2,000 - $8,000",
       timeline: "2-4 weeks",
-      icon: "📊",
+      icon: ChartIcon,
       color: "from-green-500 to-emerald-700"
     },
     {
@@ -72,7 +73,7 @@ const Services = () => {
       ],
       pricing: "$2,000 - $6,000",
       timeline: "3-5 weeks",
-      icon: "🔗",
+      icon: LinkIcon,
       color: "from-purple-500 to-indigo-700"
     }
   ];

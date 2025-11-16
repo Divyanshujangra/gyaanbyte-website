@@ -1,5 +1,17 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import {
+  BookOpenIcon,
+  CodeIcon,
+  RocketIcon,
+  BriefcaseIcon,
+  TimerIcon,
+  MoneyIcon,
+  CheckCircleIcon,
+  AcademicCapIcon,
+  TargetIcon,
+  LightningIcon
+} from '../components/Icons';
 
 const Academy = () => {
   const curriculum = [
@@ -7,62 +19,62 @@ const Academy = () => {
       week: 'Week 1-2',
       title: 'Financial Systems Fundamentals',
       topics: ['Accounting basics', 'QuickBooks essentials', 'Sage Intacct overview', 'Data structures'],
-      icon: '📚',
+      icon: BookOpenIcon,
       color: 'from-blue-500 to-blue-600'
     },
     {
       week: 'Week 3-4',
       title: 'Data Engineering Core',
       topics: ['SQL & databases', 'Python for data', 'ETL processes', 'API integration'],
-      icon: '⚙️',
+      icon: CodeIcon,
       color: 'from-purple-500 to-purple-600'
     },
     {
       week: 'Week 5-6',
       title: 'Real-World Projects',
       topics: ['Data migration project', 'Dashboard building', 'Report automation', 'Quality testing'],
-      icon: '🚀',
+      icon: RocketIcon,
       color: 'from-gb-orange-500 to-gb-orange-600'
     },
     {
       week: 'Week 7-8',
       title: 'Job Readiness',
       topics: ['Portfolio development', 'Interview prep', 'Client communication', 'Industry best practices'],
-      icon: '💼',
+      icon: BriefcaseIcon,
       color: 'from-green-500 to-green-600'
     }
   ];
 
   const outcomes = [
-    { metric: '8 Weeks', description: 'Intensive Training', icon: '⏱️' },
-    { metric: '₹12,000', description: 'Program Fee', icon: '💰' },
-    { metric: '100%', description: 'Hands-on Projects', icon: '🛠️' },
-    { metric: 'Certified', description: 'Skill India', icon: '🏆' }
+    { metric: '8 Weeks', description: 'Intensive Training', icon: TimerIcon },
+    { metric: '₹12,000', description: 'Program Fee', icon: MoneyIcon },
+    { metric: '100%', description: 'Hands-on Projects', icon: CodeIcon },
+    { metric: 'Certified', description: 'Skill India', icon: CheckCircleIcon }
   ];
 
   const benefits = [
     {
       title: 'Learn from Industry Experts',
       description: 'Training led by Ex-Accenture professionals with real-world experience in US & Indian markets',
-      icon: '👨‍🏫',
+      icon: AcademicCapIcon,
       gradient: 'from-gb-blue-500 to-gb-blue-600'
     },
     {
       title: 'Work on Live Projects',
       description: 'Get hands-on experience with actual client projects, not just dummy exercises',
-      icon: '💻',
+      icon: CodeIcon,
       gradient: 'from-purple-500 to-purple-600'
     },
     {
       title: 'Performance-Based Internships',
       description: 'Top performers get direct internship offers at GyaanByte Labs with stipend',
-      icon: '🎯',
+      icon: TargetIcon,
       gradient: 'from-gb-orange-500 to-gb-orange-600'
     },
     {
       title: 'Government Recognized Certificate',
       description: 'Earn Skill India certified credential that adds weight to your resume',
-      icon: '📜',
+      icon: AcademicCapIcon,
       gradient: 'from-green-500 to-green-600'
     }
   ];
@@ -133,13 +145,16 @@ const Academy = () => {
 
             {/* Quick Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
-              {outcomes.map((outcome, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-white/20">
-                  <div className="text-4xl mb-2">{outcome.icon}</div>
-                  <div className="text-2xl font-bold mb-1">{outcome.metric}</div>
-                  <div className="text-sm text-blue-100">{outcome.description}</div>
-                </div>
-              ))}
+              {outcomes.map((outcome, index) => {
+                const IconComponent = outcome.icon;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-white/20">
+                    <IconComponent className="w-10 h-10 mx-auto mb-2" />
+                    <div className="text-2xl font-bold mb-1">{outcome.metric}</div>
+                    <div className="text-sm text-blue-100">{outcome.description}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -158,25 +173,28 @@ const Academy = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <div className={`bg-gradient-to-r ${benefit.gradient} p-4 sm:p-6 text-white`}>
-                  <div className="flex items-center gap-4">
-                    <div className="text-5xl">{benefit.icon}</div>
-                    <h3 className="text-2xl font-bold">{benefit.title}</h3>
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <div key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
+                  <div className={`bg-gradient-to-r ${benefit.gradient} p-4 sm:p-6 text-white`}>
+                    <div className="flex items-center gap-4">
+                      <IconComponent className="w-12 h-12" />
+                      <h3 className="text-2xl font-bold">{benefit.title}</h3>
+                    </div>
+                  </div>
+                  <div className="p-4 sm:p-6">
+                    <p className="text-gray-700 text-lg leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6">
-                  <p className="text-gray-700 text-lg leading-relaxed">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Special Callout */}
           <div className="mt-8 sm:mt-12 bg-gradient-to-br from-gb-orange-50 to-gb-blue-50 rounded-3xl p-6 sm:p-8 border-2 border-gb-orange-200">
             <div className="flex items-start gap-4">
-              <div className="text-4xl">💡</div>
+              <LightningIcon className="w-10 h-10 text-gb-orange-600 flex-shrink-0" />
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">The GyaanByte Advantage</h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
@@ -202,44 +220,47 @@ const Academy = () => {
           </div>
 
           <div className="space-y-4 sm:space-y-6">
-            {curriculum.map((module, index) => (
-              <div key={index} className="group bg-gradient-to-r from-gray-50 to-white rounded-3xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
-                <div className="flex flex-col md:flex-row md:items-center gap-6">
-                  {/* Icon & Week */}
-                  <div className={`flex-shrink-0 bg-gradient-to-br ${module.color} rounded-2xl p-4 sm:p-6 text-white text-center shadow-lg`}>
-                    <div className="text-5xl mb-2">{module.icon}</div>
-                    <div className="text-sm font-semibold">{module.week}</div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{module.title}</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {module.topics.map((topic, topicIndex) => (
-                        <span key={topicIndex} className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">
-                          {topic}
-                        </span>
-                      ))}
+            {curriculum.map((module, index) => {
+              const IconComponent = module.icon;
+              return (
+                <div key={index} className="group bg-gradient-to-r from-gray-50 to-white rounded-3xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200">
+                  <div className="flex flex-col md:flex-row md:items-center gap-6">
+                    {/* Icon & Week */}
+                    <div className={`flex-shrink-0 bg-gradient-to-br ${module.color} rounded-2xl p-4 sm:p-6 text-white text-center shadow-lg`}>
+                      <IconComponent className="w-12 h-12 mx-auto mb-2" />
+                      <div className="text-sm font-semibold">{module.week}</div>
                     </div>
-                  </div>
 
-                  {/* Progress Indicator */}
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center text-white shadow-lg">
-                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                    {/* Content */}
+                    <div className="flex-grow">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{module.title}</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {module.topics.map((topic, topicIndex) => (
+                          <span key={topicIndex} className="px-4 py-2 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Progress Indicator */}
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Final Project Highlight */}
           <div className="mt-8 sm:mt-12 bg-gradient-to-br from-gb-blue-500 to-purple-600 rounded-3xl p-6 sm:p-10 text-white shadow-2xl">
             <div className="flex items-start gap-6">
-              <div className="text-6xl">🏆</div>
+              <CheckCircleIcon className="w-16 h-16 flex-shrink-0" />
               <div>
                 <h3 className="text-3xl font-bold mb-4">Capstone Project</h3>
                 <p className="text-lg text-blue-100 leading-relaxed mb-6">
