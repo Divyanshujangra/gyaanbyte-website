@@ -104,9 +104,9 @@ const Hero = memo(() => {
 
           {/* Right Side - Interactive Dashboard Preview */}
           <div className="relative lg:h-[600px] animate-slide-up" style={{animationDelay: '0.2s'}}>
-            {/* Floating badge - moved outside card */}
-            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-5 py-2.5 rounded-full shadow-xl transform rotate-3 hover:rotate-0 transition-transform z-20">
-              <div className="text-xs font-semibold whitespace-nowrap">Live Demo</div>
+            {/* Floating badge - positioned above card */}
+            <div className="absolute -top-6 -right-6 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-6 py-3 rounded-full shadow-2xl transform rotate-3 hover:rotate-0 transition-transform z-20">
+              <div className="text-sm font-bold whitespace-nowrap">Live Demo</div>
             </div>
 
             {/* Main glass card */}
