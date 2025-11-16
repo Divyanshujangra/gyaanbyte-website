@@ -114,9 +114,15 @@ const Academy = () => {
             </div>
 
             {/* Main Heading */}
+<<<<<<< HEAD
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up leading-normal pb-6 overflow-visible">
               <span className="block pb-2">GyaanByte Academy</span>
               <span className="block text-gb-orange-400 mt-2 pb-2">Learn. Build. Earn.</span>
+=======
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up leading-tight pb-2">
+              <span className="block">GyaanByte Academy</span>
+              <span className="block text-gb-orange-400 mt-2">Learn. Build. Earn.</span>
+>>>>>>> parent of 3f2a8b0 (Fix Academy title text cutoff and Live Demo badge positioning)
             </h1>
 
             {/* Subheading */}
