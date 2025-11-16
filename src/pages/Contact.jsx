@@ -41,8 +41,8 @@ const Contact = () => {
   };
 
   const sanitizeInput = (value) => {
-    // Remove any potentially harmful characters
-    return value.trim().replace(/[<>]/g, '');
+    // Remove any potentially harmful characters (but keep spaces for natural typing)
+    return value.replace(/[<>]/g, '');
   };
 
   const validateField = (name, value) => {
