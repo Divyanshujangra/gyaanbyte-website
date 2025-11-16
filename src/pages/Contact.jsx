@@ -383,63 +383,61 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number <span className="text-red-500">*</span>
-                    </label>
-                    <div className="flex gap-2">
-                      <select
-                        name="countryCode"
-                        value={formData.countryCode}
-                        onChange={handleChange}
-                        className="w-28 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm font-medium"
-                      >
-                        <option value="+1">USA +1</option>
-                        <option value="+44">UK +44</option>
-                        <option value="+91">IN +91</option>
-                        <option value="+61">AUS +61</option>
-                        <option value="+81">JPN +81</option>
-                        <option value="+86">CHN +86</option>
-                        <option value="+33">FRA +33</option>
-                        <option value="+49">GER +49</option>
-                        <option value="+971">UAE +971</option>
-                        <option value="+65">SGP +65</option>
-                      </select>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        className={`flex-1 px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
-                          errors.phone && touched.phone
-                            ? 'border-red-300 focus:border-red-500'
-                            : 'border-gray-200 focus:border-gb-blue-500'
-                        }`}
-                        placeholder="XXXXX XXXXX"
-                      />
-                    </div>
-                    {errors.phone && touched.phone && (
-                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Phone Number <span className="text-red-500">*</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <select
+                      name="countryCode"
+                      value={formData.countryCode}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
-                      placeholder="Your Company"
+                      className="w-28 flex-shrink-0 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm font-medium"
+                    >
+                      <option value="+1">USA +1</option>
+                      <option value="+44">UK +44</option>
+                      <option value="+91">IN +91</option>
+                      <option value="+61">AUS +61</option>
+                      <option value="+81">JPN +81</option>
+                      <option value="+86">CHN +86</option>
+                      <option value="+33">FRA +33</option>
+                      <option value="+49">GER +49</option>
+                      <option value="+971">UAE +971</option>
+                      <option value="+65">SGP +65</option>
+                    </select>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      className={`flex-1 min-w-0 px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                        errors.phone && touched.phone
+                          ? 'border-red-300 focus:border-red-500'
+                          : 'border-gray-200 focus:border-gb-blue-500'
+                      }`}
+                      placeholder="XXXXX XXXXX"
                     />
                   </div>
+                  {errors.phone && touched.phone && (
+                    <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
+                    Company Name
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
+                    placeholder="Your Company"
+                  />
                 </div>
 
                 <div>
