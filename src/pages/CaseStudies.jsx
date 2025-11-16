@@ -1,9 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Case Studies"
+        description="Real-world success stories from GyaanByte Labs client projects. QuickBooks migrations, Sage Intacct integrations, and financial data transformation results."
+        keywords="case studies, client success stories, quickbooks migration results, sage intacct implementation, financial data projects"
+        canonical="/case-studies"
+      />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-gb-blue to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

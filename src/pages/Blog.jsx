@@ -1,9 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Blog = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Blog"
+        description="Insights, tips, and updates on financial data engineering, QuickBooks migrations, Sage Intacct integrations, and data transformation best practices."
+        keywords="financial data engineering blog, quickbooks tips, sage intacct insights, data migration guide, ETL processes"
+        canonical="/blog"
+      />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-gb-blue to-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

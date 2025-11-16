@@ -180,7 +180,9 @@ const Contact = () => {
         setSubmitError('Failed to send message. Please try again or email us directly.');
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      if (import.meta.env.DEV) {
+        console.error('Form submission error:', error);
+      }
       setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setIsSubmitting(false);
