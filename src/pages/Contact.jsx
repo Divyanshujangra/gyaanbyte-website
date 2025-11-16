@@ -271,7 +271,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 -mt-20 sm:-mt-24 mb-12 sm:mb-16">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 sm:mb-16">
             {contactMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
                 <div className={`bg-gradient-to-r ${method.gradient} p-4 sm:p-6 text-white text-center`}>
@@ -431,12 +431,12 @@ const Contact = () => {
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all"
                   >
                     <option value="">Select a service</option>
-                    <option value="migration">📦 Data Migration (QuickBooks/Sage)</option>
-                    <option value="dashboards">📊 Dashboard Development</option>
-                    <option value="integration">🔗 System Integration</option>
-                    <option value="consulting">💼 Consulting Services</option>
-                    <option value="academy">🎓 Training Academy</option>
-                    <option value="other">💬 Other</option>
+                    <option value="migration">Data Migration (QuickBooks/Sage)</option>
+                    <option value="dashboards">Dashboard Development</option>
+                    <option value="integration">System Integration</option>
+                    <option value="consulting">Consulting Services</option>
+                    <option value="academy">Training Academy</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 
@@ -451,7 +451,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all resize-none ${
+                    className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all resize-y ${
                       errors.message && touched.message
                         ? 'border-red-300 focus:border-red-500'
                         : 'border-gray-200 focus:border-gb-blue-500'
