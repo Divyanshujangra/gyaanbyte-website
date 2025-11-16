@@ -6,6 +6,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    countryCode: '+91',
     phone: '',
     company: '',
     service: '',
@@ -143,7 +144,7 @@ const Contact = () => {
           access_key: import.meta.env.VITE_WEB3FORMS_KEY || 'YOUR_ACCESS_KEY_HERE',
           name: formData.name,
           email: formData.email,
-          phone: formData.phone,
+          phone: `${formData.countryCode} ${formData.phone}`,
           company: formData.company || 'Not provided',
           service: formData.service || 'Not specified',
           message: formData.message,
@@ -159,6 +160,7 @@ const Contact = () => {
         setFormData({
           name: '',
           email: '',
+          countryCode: '+91',
           phone: '',
           company: '',
           service: '',
@@ -386,20 +388,39 @@ const Contact = () => {
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
                       Phone Number <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className={`w-full px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
-                        errors.phone && touched.phone
-                          ? 'border-red-300 focus:border-red-500'
-                          : 'border-gray-200 focus:border-gb-blue-500'
-                      }`}
-                      placeholder="+91 XXXXX XXXXX"
-                    />
+                    <div className="flex gap-2">
+                      <select
+                        name="countryCode"
+                        value={formData.countryCode}
+                        onChange={handleChange}
+                        className="w-24 px-2 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm"
+                      >
+                        <option value="+1">🇺🇸 +1</option>
+                        <option value="+44">🇬🇧 +44</option>
+                        <option value="+91">🇮🇳 +91</option>
+                        <option value="+61">🇦🇺 +61</option>
+                        <option value="+81">🇯🇵 +81</option>
+                        <option value="+86">🇨🇳 +86</option>
+                        <option value="+33">🇫🇷 +33</option>
+                        <option value="+49">🇩🇪 +49</option>
+                        <option value="+971">🇦🇪 +971</option>
+                        <option value="+65">🇸🇬 +65</option>
+                      </select>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        className={`flex-1 px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                          errors.phone && touched.phone
+                            ? 'border-red-300 focus:border-red-500'
+                            : 'border-gray-200 focus:border-gb-blue-500'
+                        }`}
+                        placeholder="XXXXX XXXXX"
+                      />
+                    </div>
                     {errors.phone && touched.phone && (
                       <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
                     )}

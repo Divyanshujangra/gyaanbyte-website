@@ -114,7 +114,7 @@ const Academy = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up leading-tight pb-2">
               <span className="block">GyaanByte Academy</span>
               <span className="block text-gb-orange-400 mt-2">Learn. Build. Earn.</span>
             </h1>
