@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { LightningIcon, GlobeIcon, MoneyIcon, TargetIcon } from './Icons';
 
 const Hero = memo(() => {
   return (
@@ -66,16 +67,19 @@ const Hero = memo(() => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { icon: '⚡', label: 'Fast Delivery' },
-                { icon: '🌍', label: 'US Standards' },
-                { icon: '💰', label: 'Cost Efficient' },
-                { icon: '🎯', label: '99.9% Accuracy' }
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2 text-sm">
-                  <span className="text-2xl">{item.icon}</span>
-                  <span className="font-medium text-gray-700">{item.label}</span>
-                </div>
-              ))}
+                { icon: LightningIcon, label: 'Fast Delivery' },
+                { icon: GlobeIcon, label: 'US Standards' },
+                { icon: MoneyIcon, label: 'Cost Efficient' },
+                { icon: TargetIcon, label: '99.9% Accuracy' }
+              ].map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={index} className="flex items-center gap-2 text-sm">
+                    <IconComponent className="w-6 h-6 text-gb-blue-600" />
+                    <span className="font-medium text-gray-700">{item.label}</span>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Professional Credentials */}
