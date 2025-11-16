@@ -11,6 +11,8 @@ const Services = lazy(() => import('./pages/Services'));
 const Academy = lazy(() => import('./pages/Academy'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const Blog = lazy(() => import('./pages/Blog'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -36,6 +38,8 @@ function App() {
               <Route path="/academy" element={<Academy />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </Suspense>
         </Layout>

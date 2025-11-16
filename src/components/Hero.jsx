@@ -88,7 +88,7 @@ const Hero = memo(() => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full"></span>
-                  <span>IIT Patna MTech</span>
+                  <span>IIT</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-gb-blue-500 rounded-full"></span>
