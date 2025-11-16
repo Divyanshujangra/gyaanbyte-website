@@ -393,18 +393,18 @@ const Contact = () => {
                         name="countryCode"
                         value={formData.countryCode}
                         onChange={handleChange}
-                        className="w-24 px-2 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm"
+                        className="w-28 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm font-medium"
                       >
-                        <option value="+1">🇺🇸 +1</option>
-                        <option value="+44">🇬🇧 +44</option>
-                        <option value="+91">🇮🇳 +91</option>
-                        <option value="+61">🇦🇺 +61</option>
-                        <option value="+81">🇯🇵 +81</option>
-                        <option value="+86">🇨🇳 +86</option>
-                        <option value="+33">🇫🇷 +33</option>
-                        <option value="+49">🇩🇪 +49</option>
-                        <option value="+971">🇦🇪 +971</option>
-                        <option value="+65">🇸🇬 +65</option>
+                        <option value="+1">USA +1</option>
+                        <option value="+44">UK +44</option>
+                        <option value="+91">IN +91</option>
+                        <option value="+61">AUS +61</option>
+                        <option value="+81">JPN +81</option>
+                        <option value="+86">CHN +86</option>
+                        <option value="+33">FRA +33</option>
+                        <option value="+49">GER +49</option>
+                        <option value="+971">UAE +971</option>
+                        <option value="+65">SGP +65</option>
                       </select>
                       <input
                         type="tel"
