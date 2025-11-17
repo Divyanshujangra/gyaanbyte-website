@@ -88,7 +88,7 @@ const Academy = () => {
         canonical="/academy"
       />
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-12 sm:py-16 lg:py-20 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-gb-blue-600 via-gb-blue-700 to-purple-700 text-white py-12 sm:py-16 lg:py-20">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-white to-transparent rounded-full blur-3xl animate-float"></div>
@@ -114,9 +114,9 @@ const Academy = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up leading-normal pb-6 overflow-visible">
-              <span className="block pb-2">GyaanByte Academy</span>
-              <span className="block text-gb-orange-400 mt-2 pb-2">Learn. Build. Earn.</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up overflow-visible" style={{lineHeight: '1.3', paddingBottom: '3rem'}}>
+              <span className="block" style={{paddingBottom: '1rem'}}>GyaanByte Academy</span>
+              <span className="block text-gb-orange-400" style={{marginTop: '0.5rem', paddingBottom: '1rem'}}>Learn. Build. Earn.</span>
             </h1>
 
             {/* Subheading */}
