@@ -114,9 +114,9 @@ const Academy = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up overflow-visible" style={{lineHeight: '1.3', paddingBottom: '3rem'}}>
-              <span className="block" style={{paddingBottom: '1rem'}}>GyaanByte Academy</span>
-              <span className="block text-gb-orange-400" style={{marginTop: '0.5rem', paddingBottom: '1rem'}}>Learn. Build. Earn.</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-6 animate-slide-up overflow-visible" style={{lineHeight: '1.4', paddingBottom: '5rem', marginBottom: '2rem'}}>
+              <span className="block" style={{paddingBottom: '1.5rem'}}>GyaanByte Academy</span>
+              <span className="block text-gb-orange-400" style={{marginTop: '1rem', paddingBottom: '2rem'}}>Learn. Build. Earn.</span>
             </h1>
 
             {/* Subheading */}

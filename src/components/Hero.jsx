@@ -103,10 +103,10 @@ const Hero = memo(() => {
           </div>
 
 {/* Right Side - Interactive Dashboard Preview */}
-<div className="relative lg:h-[550px] animate-slide-up" style={{animationDelay: '0.2s'}}>
+<div className="relative lg:h-[500px] animate-slide-up" style={{animationDelay: '0.2s'}}>
   {/* Floating badge - positioned above card */}
-  <div className="absolute -top-12 -right-12 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-7 py-3.5 rounded-full shadow-2xl transform rotate-3 hover:rotate-0 transition-transform z-20">
-    <div className="text-sm font-bold whitespace-nowrap">Live Demo</div>
+  <div className="absolute -top-16 -right-16 bg-gradient-to-br from-gb-orange-400 to-gb-orange-500 text-white px-8 py-4 rounded-full shadow-2xl transform rotate-3 hover:rotate-0 transition-transform z-20">
+    <div className="text-base font-bold whitespace-nowrap">Live Demo</div>
   </div>
 
             {/* Main glass card */}
