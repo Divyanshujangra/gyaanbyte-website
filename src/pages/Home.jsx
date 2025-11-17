@@ -150,9 +150,9 @@ const Home = () => {
                 <span className="text-sm font-semibold text-green-800">Skill India Certified</span>
               </div>
 
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-                <span className="block">GyaanByte</span>
-                <span className="block bg-gradient-to-r from-green-600 to-gb-blue-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 overflow-visible" style={{lineHeight: '1.4', paddingBottom: '2rem'}}>
+                <span className="block" style={{paddingBottom: '0.5rem'}}>GyaanByte</span>
+                <span className="block bg-gradient-to-r from-green-600 to-gb-blue-600 bg-clip-text text-transparent" style={{paddingBottom: '0.5rem'}}>
                   Training Academy
                 </span>
               </h2>
