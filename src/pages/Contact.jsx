@@ -543,7 +543,7 @@ const Contact = () => {
                     Rohtak 124001, Haryana, India
                   </p>
                   <a
-                    href="https://share.google/NAyDAZsXGkJE7Axo9"
+                    href="https://maps.app.goo.gl/jNc494dWSB7JuJn18"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-gb-blue-600 hover:text-gb-blue-700 font-semibold"
