@@ -151,7 +151,7 @@ const Footer = memo(() => {
             <h3 className="text-lg font-bold mb-4 sm:mb-6 text-white">Get In Touch</h3>
             <div className="space-y-3 sm:space-y-4">
               <a
-                href="tel:+918950709015"
+                href="tel:+918684861010"
                 className="flex items-start gap-3 text-gray-400 hover:text-white transition-colors group"
               >
                 <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gb-blue-600 transition-colors">
@@ -161,7 +161,7 @@ const Footer = memo(() => {
                 </div>
                 <div>
                   <div className="text-sm font-medium">Call Us</div>
-                  <div className="text-xs">+91 8950 709 015</div>
+                  <div className="text-xs">+91 8684 861 010</div>
                 </div>
               </a>
 

@@ -1,8 +1,8 @@
 // Contact Information Constants
 export const CONTACT_INFO = {
   phone: {
-    display: '+91 8950 709 015',
-    link: 'tel:+918950709015',
+    display: '+91 8684 861 010',
+    link: 'tel:+918684861010',
   },
   email: {
     info: 'info@gyaanbytelabs.com',

@@ -91,8 +91,11 @@ const Terms = () => {
             </ul>
 
             <h3 className="text-2xl font-semibold text-gray-800 mb-3 mt-6">5.3 Refund Policy</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Refund policies are project-specific and detailed in the Service Agreement. Generally, deposits and advance payments are non-refundable except as expressly stated in the Service Agreement.
+            <p className="text-gray-700 leading-relaxed font-semibold">
+              We do not provide any refunds due to the nature of our business.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-2">
+              All payments made for our services are final. As we provide customized technology services and solutions that require significant time, expertise, and resources to deliver, refunds are not available once work has commenced.
             </p>
           </section>
 
@@ -204,7 +207,7 @@ const Terms = () => {
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <p className="text-gray-900 font-semibold mb-2">GyaanByte Labs Pvt Ltd</p>
               <p className="text-gray-700">Email: <a href="mailto:info@gyaanbytelabs.com" className="text-gb-blue-600 hover:underline">info@gyaanbytelabs.com</a></p>
-              <p className="text-gray-700">Phone: <a href="tel:+918950709015" className="text-gb-blue-600 hover:underline">+91 8950 709 015</a></p>
+              <p className="text-gray-700">Phone: <a href="tel:+918684861010" className="text-gb-blue-600 hover:underline">+91 8684 861 010</a></p>
               <p className="text-gray-700">Address: 1st Floor, Raj Singh Complex, Near Sheela Bypass Flyover, Rohtak 124001, Haryana, India</p>
               <p className="text-gray-700 mt-2">Company Registration: Startup India Certificate DIPP228466</p>
             </div>

@@ -18,6 +18,7 @@ const Services = () => {
         "30-day post-migration support"
       ],
       pricing: "$3,000 - $5,000",
+      pricingINR: "₹2.5L - ₹4.2L",
       timeline: "4-6 weeks",
       icon: PackageIcon,
       color: "from-gb-blue-500 to-gb-blue-700"
@@ -36,6 +37,7 @@ const Services = () => {
         "Knowledge transfer documentation"
       ],
       pricing: "$3,000 - $5,000",
+      pricingINR: "₹2.5L - ₹4.2L",
       timeline: "4-6 weeks",
       icon: DatabaseIcon,
       color: "from-gb-orange-500 to-gb-orange-700"
@@ -54,6 +56,7 @@ const Services = () => {
         "White-label options available"
       ],
       pricing: "$2,000 - $8,000",
+      pricingINR: "₹1.7L - ₹6.6L",
       timeline: "2-4 weeks",
       icon: ChartIcon,
       color: "from-green-500 to-emerald-700"
@@ -72,6 +75,7 @@ const Services = () => {
         "Ongoing maintenance included"
       ],
       pricing: "$2,000 - $6,000",
+      pricingINR: "₹1.7L - ₹5L",
       timeline: "3-5 weeks",
       icon: LinkIcon,
       color: "from-purple-500 to-indigo-700"
@@ -82,7 +86,7 @@ const Services = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Services"
-        description="QuickBooks to Sage Intacct migration ($3K-5K), Financial Dashboards ($2K-8K), System Integration & ETL. Transparent pricing, clear timelines, 99.9% accuracy guaranteed."
+        description="QuickBooks to Sage Intacct migration ($3K-5K / ₹2.5L-4.2L), Financial Dashboards ($2K-8K / ₹1.7L-6.6L), System Integration & ETL. Transparent pricing, clear timelines, 99.9% accuracy guaranteed."
         keywords="quickbooks migration, sage intacct migration, financial dashboards, system integration, etl services, data migration pricing, accounting software migration"
         canonical="/services"
       />
@@ -129,8 +133,9 @@ const Services = () => {
                 <div className="text-sm text-blue-200">Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-1">$3K</div>
-                <div className="text-sm text-blue-200">Starting At</div>
+                <div className="text-3xl font-bold mb-1">$2K</div>
+                <div className="text-xs text-blue-200">₹1.7L</div>
+                <div className="text-sm text-blue-200 mt-1">Starting At</div>
               </div>
             </div>
           </div>
@@ -193,6 +198,7 @@ const Services = () => {
                     <div>
                       <div className="text-sm text-gray-500 mb-1">Investment</div>
                       <div className="text-2xl font-bold text-gray-900">{service.pricing}</div>
+                      <div className="text-base text-gray-600 mt-1">{service.pricingINR}</div>
                     </div>
                     <Link
                       to="/contact"

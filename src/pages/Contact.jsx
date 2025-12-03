@@ -35,15 +35,59 @@ const Contact = () => {
     return emailRegex.test(email);
   };
 
-  const validatePhone = (phone) => {
-    // Allow various phone formats: +91 XXXXX XXXXX, XXXXXXXXXX, etc.
-    const phoneRegex = /^[\d\s+()-]{10,}$/;
-    return phoneRegex.test(phone);
+  const validatePhone = (phone, countryCode) => {
+    // Remove all non-digit characters for validation
+    const digitsOnly = phone.replace(/\D/g, '');
+
+    // Country-specific validation rules
+    const countryRules = {
+      '+1': { length: 10, name: 'USA', format: '(XXX) XXX-XXXX' },
+      '+44': { minLength: 10, maxLength: 11, name: 'UK', format: 'XXXX XXX XXXX' },
+      '+91': { length: 10, name: 'India', format: 'XXXXX XXXXX' },
+      '+61': { length: 9, name: 'Australia', format: 'XXX XXX XXX' },
+      '+81': { length: 10, name: 'Japan', format: 'XX XXXX XXXX' },
+      '+86': { length: 11, name: 'China', format: 'XXX XXXX XXXX' },
+      '+33': { length: 9, name: 'France', format: 'X XX XX XX XX' },
+      '+49': { minLength: 10, maxLength: 11, name: 'Germany', format: 'XXX XXXXXXXX' },
+      '+971': { length: 9, name: 'UAE', format: 'XX XXX XXXX' },
+      '+65': { length: 8, name: 'Singapore', format: 'XXXX XXXX' }
+    };
+
+    const rule = countryRules[countryCode];
+    if (!rule) return false;
+
+    // Check if phone has minimum required characters
+    if (digitsOnly.length < 8) return false;
+
+    // Check against country-specific rules
+    if (rule.length) {
+      return digitsOnly.length === rule.length;
+    } else if (rule.minLength && rule.maxLength) {
+      return digitsOnly.length >= rule.minLength && digitsOnly.length <= rule.maxLength;
+    }
+
+    return false;
   };
 
   const sanitizeInput = (value) => {
     // Remove any potentially harmful characters (but keep spaces for natural typing)
     return value.replace(/[<>]/g, '');
+  };
+
+  const getPhoneFormat = (countryCode) => {
+    const formats = {
+      '+1': '(XXX) XXX-XXXX',
+      '+44': 'XXXX XXX XXXX',
+      '+91': 'XXXXX XXXXX',
+      '+61': 'XXX XXX XXX',
+      '+81': 'XX XXXX XXXX',
+      '+86': 'XXX XXXX XXXX',
+      '+33': 'X XX XX XX XX',
+      '+49': 'XXX XXXXXXXX',
+      '+971': 'XX XXX XXXX',
+      '+65': 'XXXX XXXX'
+    };
+    return formats[countryCode] || 'Valid phone number';
   };
 
   const validateField = (name, value) => {
@@ -60,7 +104,10 @@ const Contact = () => {
 
       case 'phone':
         if (!value.trim()) return 'Phone number is required';
-        if (!validatePhone(value)) return 'Please enter a valid phone number (min 10 digits)';
+        if (!validatePhone(value, formData.countryCode)) {
+          const format = getPhoneFormat(formData.countryCode);
+          return `Please enter a valid phone number. Format: ${format}`;
+        }
         return '';
 
       case 'message':
@@ -77,10 +124,21 @@ const Contact = () => {
     const { name, value } = e.target;
     const sanitizedValue = sanitizeInput(value);
 
-    setFormData({
+    const newFormData = {
       ...formData,
       [name]: sanitizedValue
-    });
+    };
+
+    setFormData(newFormData);
+
+    // If country code changes, re-validate phone number
+    if (name === 'countryCode' && formData.phone && touched.phone) {
+      const phoneError = validateField('phone', formData.phone);
+      setErrors({
+        ...errors,
+        phone: phoneError
+      });
+    }
 
     // Validate on change if field was touched
     if (touched[name]) {
@@ -199,8 +257,8 @@ const Contact = () => {
         </svg>
       ),
       title: 'Call Us',
-      primary: '+91 8950 709 015',
-      primaryLink: 'tel:+918950709015',
+      primary: '+91 8684 861 010',
+      primaryLink: 'tel:+918684861010',
       secondary: 'Mon-Sat, 9AM-6PM IST',
       gradient: 'from-gb-blue-500 to-gb-blue-600'
     },
@@ -235,7 +293,7 @@ const Contact = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Contact Us"
-        description="Get in touch with GyaanByte Labs. Call +91 8950 709 015 or email info@gyaanbytelabs.com. Free consultation for QuickBooks & Sage Intacct projects. Response time < 4 hours."
+        description="Get in touch with GyaanByte Labs. Call +91 8684 861 010 or email info@gyaanbytelabs.com. Free consultation for QuickBooks & Sage Intacct projects. Response time < 4 hours."
         keywords="contact gyaanbyte, quickbooks consultant, sage intacct expert, financial data services, free consultation, rohtak haryana"
         canonical="/contact"
       />
@@ -387,23 +445,23 @@ const Contact = () => {
                   <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 sm:gap-3">
                     <select
                       name="countryCode"
                       value={formData.countryCode}
                       onChange={handleChange}
-                      className="w-28 flex-shrink-0 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-sm font-medium"
+                      className="w-[90px] sm:w-28 flex-shrink-0 px-2 sm:px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-gb-blue-500 focus:border-gb-blue-500 transition-all text-xs sm:text-sm font-medium"
                     >
-                      <option value="+1">USA +1</option>
-                      <option value="+44">UK +44</option>
-                      <option value="+91">IN +91</option>
-                      <option value="+61">AUS +61</option>
-                      <option value="+81">JPN +81</option>
-                      <option value="+86">CHN +86</option>
-                      <option value="+33">FRA +33</option>
-                      <option value="+49">GER +49</option>
-                      <option value="+971">UAE +971</option>
-                      <option value="+65">SGP +65</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+44">🇬🇧 +44</option>
+                      <option value="+91">🇮🇳 +91</option>
+                      <option value="+61">🇦🇺 +61</option>
+                      <option value="+81">🇯🇵 +81</option>
+                      <option value="+86">🇨🇳 +86</option>
+                      <option value="+33">🇫🇷 +33</option>
+                      <option value="+49">🇩🇪 +49</option>
+                      <option value="+971">🇦🇪 +971</option>
+                      <option value="+65">🇸🇬 +65</option>
                     </select>
                     <input
                       type="tel"
@@ -412,12 +470,12 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      className={`flex-1 min-w-0 px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all ${
+                      className={`flex-1 min-w-0 px-3 sm:px-4 py-3 border-2 rounded-xl focus:ring-2 focus:ring-gb-blue-500 transition-all text-sm sm:text-base ${
                         errors.phone && touched.phone
                           ? 'border-red-300 focus:border-red-500'
                           : 'border-gray-200 focus:border-gb-blue-500'
                       }`}
-                      placeholder="XXXXX XXXXX"
+                      placeholder={getPhoneFormat(formData.countryCode)}
                     />
                   </div>
                   {errors.phone && touched.phone && (

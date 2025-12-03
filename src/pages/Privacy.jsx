@@ -151,7 +151,7 @@ const Privacy = () => {
             <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <p className="text-gray-900 font-semibold mb-2">GyaanByte Labs Pvt Ltd</p>
               <p className="text-gray-700">Email: <a href="mailto:info@gyaanbytelabs.com" className="text-gb-blue-600 hover:underline">info@gyaanbytelabs.com</a></p>
-              <p className="text-gray-700">Phone: <a href="tel:+918950709015" className="text-gb-blue-600 hover:underline">+91 8950 709 015</a></p>
+              <p className="text-gray-700">Phone: <a href="tel:+918684861010" className="text-gb-blue-600 hover:underline">+91 8684 861 010</a></p>
               <p className="text-gray-700">Address: 1st Floor, Raj Singh Complex, Near Sheela Bypass Flyover, Rohtak 124001, Haryana, India</p>
             </div>
           </section>
