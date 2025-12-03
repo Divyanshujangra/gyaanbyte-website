@@ -47,7 +47,7 @@ const Academy = () => {
 
   const outcomes = [
     { metric: '8 Weeks', description: 'Intensive Training', icon: TimerIcon },
-    { metric: '₹12,000', description: 'Program Fee', icon: MoneyIcon },
+    { metric: '₹12K ($145)', description: 'Program Fee', icon: MoneyIcon },
     { metric: '100%', description: 'Hands-on Projects', icon: CodeIcon },
     { metric: 'Certified', description: 'Skill India', icon: CheckCircleIcon }
   ];
@@ -83,7 +83,7 @@ const Academy = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Training Academy"
-        description="8-week intensive financial data engineering program. ₹12,000 fee. Skill India certified. Learn QuickBooks, Sage Intacct, data migration, dashboards. Job placement assistance included."
+        description="8-week intensive financial data engineering program. ₹12,000 ($145) fee. Skill India certified. Learn QuickBooks, Sage Intacct, data migration, dashboards. Job placement assistance included."
         keywords="financial data engineering training, skill india, quickbooks training, sage intacct course, data engineering bootcamp, job placement, internship program"
         canonical="/academy"
       />
@@ -422,7 +422,8 @@ const Academy = () => {
           {/* Pricing Card */}
           <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 border-2 border-white/30 mb-10 max-w-md mx-auto">
             <div className="text-sm font-semibold text-blue-200 mb-2">Program Fee</div>
-            <div className="text-6xl font-extrabold mb-4">₹12,000</div>
+            <div className="text-6xl font-extrabold mb-2">₹12,000</div>
+            <div className="text-2xl text-blue-200 mb-4">$145</div>
             <div className="text-blue-100 mb-6">One-time payment • No hidden costs</div>
             <div className="space-y-2 text-left mb-6">
               <div className="flex items-center gap-2 text-sm">

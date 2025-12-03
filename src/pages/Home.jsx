@@ -66,6 +66,7 @@ const Home = () => {
                 <div>
                   <div className="text-sm text-white/80">Starting at</div>
                   <div className="text-3xl font-bold">$3,000</div>
+                  <div className="text-base text-white/70 mt-1">₹2.5L</div>
                 </div>
                 <Link to="/services" className="px-6 py-3 bg-white text-gb-blue-700 rounded-xl font-semibold hover:bg-white/90 transition-colors">
                   Learn More
@@ -84,7 +85,8 @@ const Home = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Real-time financial KPIs, beautiful visualizations, actionable insights.
               </p>
-              <div className="text-2xl font-bold text-gray-900 mb-2">$2,000+</div>
+              <div className="text-2xl font-bold text-gray-900 mb-1">$2,000+</div>
+              <div className="text-base text-gray-600 mb-2">₹1.7L+</div>
               <div className="text-sm text-gray-500">Starting price</div>
             </div>
 
@@ -99,7 +101,8 @@ const Home = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Connect your systems seamlessly with powerful integrations.
               </p>
-              <div className="text-2xl font-bold text-gray-900 mb-2">$1,500+</div>
+              <div className="text-2xl font-bold text-gray-900 mb-1">$1,500+</div>
+              <div className="text-base text-gray-600 mb-2">₹1.25L+</div>
               <div className="text-sm text-gray-500">Starting price</div>
             </div>
 
@@ -114,7 +117,8 @@ const Home = () => {
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Strategic guidance for your financial data infrastructure.
               </p>
-              <div className="text-2xl font-bold text-gray-900 mb-2">$150/hr</div>
+              <div className="text-2xl font-bold text-gray-900 mb-1">$150/hr</div>
+              <div className="text-base text-gray-600 mb-2">₹12,500/hr</div>
               <div className="text-sm text-gray-500">Hourly rate</div>
             </div>
 
