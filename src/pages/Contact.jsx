@@ -331,8 +331,8 @@ const Contact = () => {
       </div>
 
       {/* Contact Methods */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12 sm:mb-16">
             {contactMethods.map((method, index) => (
               <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden">
@@ -361,12 +361,12 @@ const Contact = () => {
           </div>
 
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 w-full">
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-lg p-6 sm:p-8 border border-gray-100">
-              <div className="mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">Send Us a Message</h2>
-                <p className="text-gray-600 text-lg">
+            <div className="bg-white rounded-3xl shadow-lg p-4 sm:p-6 lg:p-8 border border-gray-100 w-full max-w-full overflow-hidden">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Send Us a Message</h2>
+                <p className="text-gray-600 text-base sm:text-lg">
                   Tell us about your project and we'll get back to you with a detailed proposal and timeline.
                 </p>
               </div>
@@ -385,7 +385,7 @@ const Contact = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-6">
                 {/* Show submit error if any */}
                 {submitError && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
@@ -393,7 +393,7 @@ const Contact = () => {
                   </div>
                 )}
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                       Full Name <span className="text-red-500">*</span>
@@ -545,7 +545,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 ${
+                  className={`w-full px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg transition-all duration-200 ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
                       : 'bg-gradient-to-r from-gb-blue-600 to-gb-blue-700 text-white hover:shadow-xl transform hover:-translate-y-0.5'
@@ -578,7 +578,7 @@ const Contact = () => {
             </div>
 
             {/* Right Column - Info Cards */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6 w-full max-w-full">
               {/* Map */}
               <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
                 <div className="h-[300px]">
@@ -593,8 +593,8 @@ const Contact = () => {
                     title="GyaanByte Labs Location"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Our Office</h3>
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Our Office</h3>
                   <p className="text-gray-600 mb-3">
                     1st Floor, Raj Singh Complex<br />
                     Near Sheela Bypass Flyover<br />
@@ -615,8 +615,8 @@ const Contact = () => {
               </div>
 
               {/* Government Recognition */}
-              <div className="bg-gradient-to-br from-gb-blue-50 to-purple-50 rounded-3xl p-8 shadow-lg border-2 border-gb-blue-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <div className="bg-gradient-to-br from-gb-blue-50 to-purple-50 rounded-3xl p-4 sm:p-6 lg:p-8 shadow-lg border-2 border-gb-blue-200">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6 flex items-center gap-2">
                   <svg className="w-6 h-6 text-gb-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
                     <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
